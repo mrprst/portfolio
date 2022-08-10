@@ -1,5 +1,7 @@
 import '../styles/globals.css'
-import Layout from "../components/Layout";
+import '../styles/styles.css'
+
+import Layout from "../components/layout";
 import type { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core'
 
