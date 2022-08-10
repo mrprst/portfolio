@@ -1,0 +1,15 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+
+.menu {
+  display: flex;
+}
+
+.a {
+  margin-left: 5px;
+  padding: 10px;
+}
