@@ -40,7 +40,7 @@ export default function Tagline() {
           padding: '1rem',
           textAlign: 'center',
         }}
-        >
+        >Hello, this is my website. I'm a
         <Code
           sx={{
             color: 'black',
@@ -49,7 +49,9 @@ export default function Tagline() {
           }}
           >
           fullstack
-        </Code>
+        </Code> web developer.
+        <br />
+        Here, you will find everything I've done in my life that might interest you if you want us to work together.
       </Text>
 
       {/* <Grid>

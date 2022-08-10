@@ -14,26 +14,29 @@ export default function Navbar() {
           </Link>
         </div>
         <div className={classes.menu}>
-          <Link href="/about">
+          <Link href="#about">
             <div className={classes.a}>
               About
             </div>
           </Link>
-          <Link href="/projects">
+          <Link href="#projects">
             <div className={classes.a}>
               Projects
             </div>
           </Link>
-          <Link href="/contact">
+          <Link href="#contact">
             <div className={classes.a}>
               Say Hi
             </div>
           </Link>
-          <Link href="/resume">
+          <a
+            href="/mathias-prost-resume.pdf"
+            target="_blank"
+          >
             <div className={classes.a}>
               Resume
             </div>
-          </Link>
+          </a>
         </div>
       </nav>
     </header>

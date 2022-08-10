@@ -1,3 +1,7 @@
+:root {
+  --main-color: transparent;
+  --pane-padding: 5px 42px;
+}
 @font-face {
   font-family: 'YoungSerif';
   src: url('../public/fonts/YoungSerif-Regular.otf');

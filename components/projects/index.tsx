@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Projects() {
   return (
-    <div>
+    <div id='projects'>
       <div>Projects</div>
       <div>Peps.life</div>
       <div>SLAF!</div>
