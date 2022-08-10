@@ -1,5 +1,9 @@
 :root {
-  --main-color: transparent;
+  --primary: #358f80;
+  --primary-light: #67b99a;
+  --primary-lighter: #88d4ab;
+  --primary-dark: #14746f;
+  --primary-darker: #036666;
   --pane-padding: 5px 42px;
 }
 @font-face {
@@ -19,6 +23,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: YoungSerif;
+  color: var(--primary) !important;
 }
 
 h1 {
@@ -36,11 +41,11 @@ p {
 
 @media (min-width: 800px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
 
   p {
-    font-size: 1.2rem
+    font-size: 1.2rem !important
   }
 }
 
