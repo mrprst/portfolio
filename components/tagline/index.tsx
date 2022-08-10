@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Code, Text } from '@mantine/core'
+import classes from './Tagline.module.css'
 
 export default function Tagline() {
   return (
@@ -15,32 +16,11 @@ export default function Tagline() {
         alignItems: 'center',
       }}
       >
-      <Text
-        sx={{
-          color: '#0070f3',
-          fontSize: '2rem',
-          '@media (min-width: 800px)': {
-            fontSize: '3rem',
-          },
-          fontWeight: 'bold',
-          fontFamily: 'YoungSerif',
-          textAlign: 'center',
-        }}
-        >
+      <h1 className={classes.title}>
         mrprst.dev
-      </Text>
+      </h1>
 
-      <Text
-        sx={{
-          color: 'black',
-          fontSize: '0.9rem',
-          '@media (min-width: 700px)': {
-            fontSize: '1.2rem',
-          },
-          padding: '1rem',
-          textAlign: 'center',
-        }}
-        >Hello, this is my website. I'm a
+      <p className={classes.content}>Hello, this is my website. I'm a
         <Code
           sx={{
             color: 'black',
@@ -52,7 +32,7 @@ export default function Tagline() {
         </Code> web developer.
         <br />
         Here, you will find everything I've done in my life that might interest you if you want us to work together.
-      </Text>
+      </p>
 
       {/* <Grid>
         <Card

@@ -17,8 +17,31 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: YoungSerif;
+}
+
+h1 {
+  color: #0070f3;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'YoungSerif';
+}
+
+p {
+  color: black;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem
+  }
 }
 
 a {
