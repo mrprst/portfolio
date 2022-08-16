@@ -4,9 +4,22 @@
   justify-content: center;
   background-color: white;
   border: 1.2px solid var(--primary);
-  box-shadow: -5px 5px 0px var(--primary);
+  box-shadow: -0.4em 0.4em 0px var(--primary);
   width: 200px;
   height: 50px;
+  &:hover,
+  &:focus {
+    background-color: var(--primary);
+    box-shadow: 0px var(--primary);
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    .title {
+      color: #fff;
+    }
+  }
 }
 
 .buttonSm {
@@ -15,9 +28,22 @@
   justify-content: center;
   background-color: white;
   border: 1.2px solid var(--primary);
-  box-shadow: -5px 5px 0px var(--primary);
+  box-shadow: -0.4em 0.4em 0px var(--primary);
   width: 100px;
   height: 25px;
+  &:hover,
+  &:focus {
+    background-color: var(--primary);
+    box-shadow: 0px var(--primary);
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    .title {
+      color: #fff;
+    }
+  }
 }
 
 .title {

@@ -10,7 +10,7 @@ export default function Footer() {
         flex: '1',
         paddingTop: '2rem',
         paddingBottom: '2rem',
-        borderTop: '1px solid #eaeaea',
+        borderTop: '1px solid',
         justifyContent: 'center',
         alignItems: 'center',
       }}

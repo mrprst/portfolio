@@ -12,7 +12,7 @@ const Card = (props: Props) => {
       href={props.link}
       target="_blank"
       sx={{
-        border: '1px solid #eaeaea',
+        border: '1px solid',
         margin: '1rem',
         padding: '1.5rem',
         borderRadius: '10px',
