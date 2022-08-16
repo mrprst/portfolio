@@ -1,9 +1,9 @@
 :root {
-  --primary: #358f80;
-  --primary-light: #67b99a;
-  --primary-lighter: #88d4ab;
-  --primary-dark: #14746f;
-  --primary-darker: #036666;
+  --primary: #1C5F42;
+  --primary-light: #32a975;
+  --secondary: #5E1C39;
+  --secondary-light: #b4336b;
+  --background: #FAF5F0;
   --pane-padding: 5px 42px;
 }
 @font-face {
@@ -27,7 +27,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  color: #0070f3;
+  color: #1C5F42;
   font-size: 2rem;
   font-weight: bold;
   font-family: 'YoungSerif';

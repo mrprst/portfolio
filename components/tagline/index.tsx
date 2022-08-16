@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Code, Text } from '@mantine/core'
 import classes from './Tagline.module.css'
+import Button from '../button'
 
 export default function Tagline() {
   return (
@@ -33,6 +34,7 @@ export default function Tagline() {
         <br />
         Here, you will find everything I've done in my life that might interest you if you want us to work together.
       </p>
+      < Button title='yoyoyo' size='lg'/>
 
       {/* <Grid>
         <Card

@@ -1,0 +1,30 @@
+.buttonLg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1.2px solid var(--primary);
+  box-shadow: -5px 5px 0px var(--primary);
+  width: 200px;
+  height: 50px;
+}
+
+.buttonSm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1.2px solid var(--primary);
+  box-shadow: -5px 5px 0px var(--primary);
+  width: 100px;
+  height: 25px;
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary);
+}
+
