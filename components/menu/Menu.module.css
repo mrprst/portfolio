@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  margin-left: 20px;
+}
+
+.a {
+  margin-left: 5px;
+  font-size: 1.5rem !important;
+  padding: 20px;
+  cursor: pointer;
+  color: var(--primary) !important;
+}
+
+@media (max-width: 500px) {
+  .menu {
+    position: absolute;
+    display: flex;
+    margin-left: -20px;
+    flex-direction: column;
+    width: 100vw;
+    left: 0;
+    top: 49px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: var(--background);
+  }
+
+}
