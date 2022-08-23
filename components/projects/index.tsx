@@ -1,24 +1,58 @@
 import React from 'react'
-import classes from './Projects.module.css'
+import classes from './Projects.module.scss'
+import Button from '../button'
+import Projectpic from '../projectpic/'
+import { Code } from '@mantine/core'
+import Burger from '@mantine/core'
 
 export default function Projects() {
   return (
-    <div id='projects'>
+    <div id="projects" className={classes.container}>
       <h1 className={classes.title}>Projects</h1>
-      <h2 className={classes.title}>Peps.life</h2>
+      <div className={classes.buttons}>
+        <Button title="Peps" size="sm" />
+        <Button title="SLAF!" size="sm" />
+        <Button title="IMR" size="sm" />
+      </div>
+      <Projectpic />
+      <div className={classes.projectdetails}>
+        <h2 className={classes.title}>Peps.life</h2>
         <p className={classes.content}>
-          As a music and vinyl lover, I use to spend a LOT of time on Discogs, one of the biggest music database and marketplace. If you don't know it, it is basically a wiki where you can browse infinitely from artists to labels, coutries, genres, etc.
-          I got this idea of replicate the wiki system to build a french recipe wiki database. The idea behind this is to allow the user to get inspirations from a variety of elements from ingredients, countries and regions just by clicking on it. We chose to classify our recipes into families of dishes. Each dish has a variety of recipes (or variants) regarding its ingredients or countries.
+          As a music and vinyl lover, I use to spend a LOT of time on Discogs,
+          one of the biggest music database and marketplace. If you don't know
+          it, it is basically a wiki where you can browse infinitely from
+          artists to labels, coutries, genres, etc. I got this idea of replicate
+          the wiki system to build a french recipe wiki database. The idea
+          behind this is to allow the user to get inspirations from a variety of
+          elements from ingredients, countries and regions just by clicking on
+          it. We chose to classify our recipes into families of dishes. Each
+          dish has a variety of recipes (or variants) regarding its ingredients
+          or countries.
         </p>
-      <h2 className={classes.title}>SLAF!</h2>
+        <div className={classes.languages}>
+          <Code>Ruby on Rails</Code>
+          <Code>Javascript</Code>
+          <Code>Ananas</Code>
+        </div>
+        <div className={classes.logos}>
+          <p>A</p>
+          <p>B</p>
+          <p>O</p>
+        </div>
+        <h2 className={classes.title}>SLAF!</h2>
         <p className={classes.content}>
-          This project was the first real project I got involved after my Ruby on Rails training. This website is an Urban Dictionnary-like franglish parodic translator. The overuse of buzzwords, especially in the startup echosystem might be borring sometimes, so we choose to shine light on their french equivalents.
-          For the website design, we chose to give a brutalist and retro approach.
+          This project was the first real project I got involved after my Ruby on
+          Rails training. This website is an Urban Dictionnary-like franglish
+          parodic translator. The overuse of buzzwords, especially in the startup
+          echosystem might be borring sometimes, so we choose to shine light on
+          their french equivalents. For the website design, we chose to give a
+          brutalist and retro approach.
         </p>
         <h2 className={classes.title}>IMR</h2>
-        <div>
-
-        </div>
+        <p className={classes.content}>
+          Lorem ipsum dolor macarelle.
+        </p>
+      </div>
     </div>
   )
 }

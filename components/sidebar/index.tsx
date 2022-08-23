@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'next/link';
-import classes from "./Sidebar.module.css";
+import Link from 'next/link'
+import classes from './Sidebar.module.scss'
+import { Image } from '@mantine/core'
 
 export default function Sidebar() {
   return (
@@ -8,16 +9,12 @@ export default function Sidebar() {
       <ul className={classes.social}>
         <li>
           <Link href="https://github.com/mrprst">
-            <div className={classes.a}>
-              Git
-            </div>
+            <Image src="/github.svg" alt="github profile" />
           </Link>
         </li>
         <li>
           <Link href="https://www.linkedin.com/in/mathiasprost/">
-            <div className={classes.a}>
-              Linkedin
-            </div>
+            <Image src="/linkedin.svg" alt="linkedin profile" />
           </Link>
         </li>
       </ul>

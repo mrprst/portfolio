@@ -50,17 +50,17 @@ h4 {
 
 p {
   color: black;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   padding: 1rem;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 600px) {
   h1 {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
   }
 
   p {
-    font-size: 1.2rem !important
+    font-size: 1.1rem !important
   }
 }
 

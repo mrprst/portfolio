@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./Menu.module.css";
+import classes from "./Menu.module.scss";
 import Link from 'next/link';
 
 
@@ -18,7 +18,7 @@ function Menu() {
       </Link>
       <Link href="#contact">
         <div className={classes.a}>
-          say hi
+          contact
         </div>
       </Link>
       <a

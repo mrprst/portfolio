@@ -1,22 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Burger } from '@mantine/core';
 import Link from 'next/link';
-import classes from "./NavBar.module.css";
+import classes from "./NavBar.module.scss";
 import Menu from '../menu';
 
 export default function Navbar() {
-  const [opened, setOpened] = useState(false);
+  const [opened, setOpened] = useState(true);
+  const [showmenu, setShowmenu] = useState(false);
   const title = opened ? 'Close navigation' : 'Open navigation';
-  const isNarrowScreen = window.matchMedia("(min-width: 500px)");
 
-  isNarrowScreen.addEventListener( "change", (e) => {
-    if (e.matches) {
-      setOpened(true)
-    } else {
-      setOpened(false)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const isNarrowScreen = window.matchMedia("(max-width: 600px)");
+      isNarrowScreen.addEventListener( "change", (e) => {
+        if (e.matches) {
+          setOpened(false)
+        } else {
+          setOpened(true)
+        }
+      });
+      if (isNarrowScreen.matches) {
+        setOpened(false)
+      } else {
+        setOpened(true)
+      }
     }
-  });
-
+  }, []);
 
   return (
     <header className={classes.header}>
@@ -31,12 +40,13 @@ export default function Navbar() {
         <div className={classes.bg}>
           <Burger
             opened={opened}
-            onClick={() => setOpened((o) => !o)}
+            onClick={() =>
+              setOpened((o) => !o)
+            }
             title={title}
             color="#1C5F42"
           />
         </div>
-        <Menu />
         { opened ? <Menu /> : null }
       </nav>
     </header>

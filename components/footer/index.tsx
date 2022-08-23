@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box } from '@mantine/core'
+import classes from './Footer.module.scss'
 
 export default function Footer() {
   return (
