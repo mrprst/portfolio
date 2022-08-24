@@ -1,7 +1,18 @@
+
+.container {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around
+
+}
+
 .title {
   width: 100%;
   text-align: left;
-  padding-left: 1rem;
 }
 
 .content {

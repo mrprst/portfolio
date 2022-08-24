@@ -1,9 +1,16 @@
-.layout {
-  padding: 100px 0px 0px 100px
+.main {
+  padding: 100px 150px;
+
+  @media (max-width: 768px) {
+    padding: 100px 50px;
+  }
+  @media (max-width: 480px) {
+    padding: 100px 25px;
+  }
 }
 
-@media (max-width: 600px) {
-  .layout {
-    padding: 100px 20px 0px 20px
+.sidebar {
+  @media (max-width: 768px) {
+    display: none;
   }
 }

@@ -3,7 +3,6 @@ import Head from 'next/head'
 import About from '../components/about'
 import Projects from '../components/projects'
 import Tagline from '../components/tagline'
-import Footer from '../components/footer/index'
 import Image from 'next/image'
 import Card from '../components/Card'
 import Grid from '../components/Grid'
@@ -21,8 +20,6 @@ const Home: NextPage = () => {
       <About />
       <Projects />
       <Contact />
-      <Footer />
-
     </>
   )
 }
