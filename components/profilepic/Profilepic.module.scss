@@ -3,7 +3,8 @@
   background-size: cover;
   border: 1.2px solid var(--primary);
   border-radius: 100%;
-  box-shadow: -0.4em 0.4em 0px var(--primary);
+  box-shadow: 0.2rem 0.2rem 0px 0px var(--primary),
+    0.2rem 0.2rem 0 0.1rem var(--primary);
   width: 230px;
   height: 230px;
   display: flex;

@@ -3,32 +3,11 @@
   margin-top: 50px;
 }
 
-.title {
-  width: 100%;
-  text-align: left;
-}
-
-.content {
-  width: 100%;
-  text-align: left;
-  padding: 0px;
-}
-
-.projectdetails {
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-.logos {
-  display: flex;
-}
-
 .buttons {
   display: flex;
   flex-direction: row;
   width: 50%;
-  justify-content: space-around;
-
+  justify-content: space-between;
   @media (max-width: 600px) {
     width: 100%;
   }

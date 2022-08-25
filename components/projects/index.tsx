@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import classes from './Projects.module.scss'
 import Button from '../button'
 import Projectpic from '../projectpic/'
-import { Code } from '@mantine/core'
-import Burger from '@mantine/core'
+import Project from '../project/'
+import { projectData } from "../../public/projectsdata";
 
-export default function Projects() {
+function Projects() {
+  const [projectkey, setProjectkey] = useState(null);
+
   return (
     <div id="projects" className={classes.container}>
       <h1 className={classes.title}>Projects</h1>
@@ -14,8 +16,21 @@ export default function Projects() {
         <Button title="SLAF!" size="sm" />
         <Button title="IMR" size="sm" />
       </div>
+      <div className="App">
+      </div>
       <Projectpic />
-      <div className={classes.projectdetails}>
+      <div className="a-changer">
+        {projectData.map((data, key) => {
+          if(key === projectkey) {
+            return (
+              <div key={key}>
+                <Project title={data.title} content={data.description} />
+              </div>
+            );
+          }
+        })}
+      </div>
+      {/* <div className={classes.projectdetails}>
         <h2 className={classes.title}>Peps.life</h2>
         <p className={classes.content}>
           As a music and vinyl lover, I use to spend a LOT of time on Discogs,
@@ -52,7 +67,10 @@ export default function Projects() {
         <p className={classes.content}>
           Lorem ipsum dolor macarelle.
         </p>
-      </div>
+      </div> */}
     </div>
   )
 }
+
+
+export default Projects

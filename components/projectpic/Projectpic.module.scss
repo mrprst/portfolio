@@ -1,8 +1,9 @@
 .projectpic {
-  background-image: url(../../public/profilepic.jpg);
+  background-image: url(../../public/peps.jpg);
   background-size: cover;
   border: 1.2px solid var(--primary);
-  box-shadow: -0.4em 0.4em 0px var(--primary);
+  box-shadow: 0.2rem 0.2rem 0px 0px var(--primary),
+    0.2rem 0.2rem 0 0.1rem var(--primary);
   margin-top: 50px;
   margin-left: 2rem;
   width: 430px;

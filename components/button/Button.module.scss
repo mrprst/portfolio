@@ -4,18 +4,15 @@
   justify-content: center;
   background-color: white;
   border: 1.2px solid var(--primary);
-  box-shadow: -0.4em 0.4em 0px var(--primary);
+  box-shadow: 0.2rem 0.2rem 0px 0px var(--primary),
+    0.2rem 0.2rem 0 0.1rem var(--primary);
   width: 200px;
   height: 50px;
   &:hover,
   &:focus {
     background-color: var(--primary);
     box-shadow: 0px var(--primary);
-    transition:0.5s;
-    -webkit-transition:0.5s;
-    -moz-transition:0.5s;
-    -ms-transition:0.5s;
-    -o-transition:0.5s;
+    transition: 0.2s ease-out;
     .title {
       color: #fff;
     }
@@ -28,18 +25,15 @@
   justify-content: center;
   background-color: white;
   border: 1.2px solid var(--primary);
-  box-shadow: -0.4em 0.4em 0px var(--primary);
+  box-shadow: 0.2rem 0.2rem 0px 0px var(--primary),
+    0.2rem 0.2rem 0 0.1rem var(--primary);
   width: 100px;
   height: 50px;
   &:hover,
   &:focus {
     background-color: var(--primary);
     box-shadow: 0px var(--primary);
-    transition:0.5s;
-    -webkit-transition:0.5s;
-    -moz-transition:0.5s;
-    -ms-transition:0.5s;
-    -o-transition:0.5s;
+    transition: 0.2s ease-out;
     .title {
       color: #fff;
     }
@@ -48,7 +42,7 @@
   @media (max-width: 600px) {
     width: 75px;
     height: 40px;
-    }
+  }
 }
 
 .title {
@@ -59,3 +53,11 @@
   color: var(--primary);
 }
 
+.btnTest {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0.4rem 0.4rem 0px 0px white,
+    0.4rem 0.4rem 0 0.1rem var(--border-color);
+  transition: 0.2s ease-out;
+}
