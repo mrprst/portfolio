@@ -1,13 +1,22 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'react'
+import Image from 'next/image'
 import classes from './Projectpic.module.scss'
-import image from '../../public/profilepic.jpg'
+import slaf from '../../public/slaf.jpg'
+import peps from '../../public/peps.jpg'
 
-export default function Projectpic () {
-  return (
-    <div className={classes.projectpic}>
-      <div className={classes.link}>œ</div>
-    </div>
-  );
+type Props = {
+  project: string
+  link: string
 }
 
+export default function Projectpic(props: Props) {
+  const divImage = {
+    backgroundImage: 'url(/' + props.project + '.jpg)',
+  }
+
+  return (
+    <a className={classes.link} href={props.link}>
+      <div style={divImage} className={classes.projectpic}></div>
+    </a>
+  )
+}

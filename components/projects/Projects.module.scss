@@ -12,3 +12,15 @@
     width: 100%;
   }
 }
+
+.project {
+  margin-top: 20px;
+}
+
+.projectcontainer {
+  display: flex;
+  align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+}

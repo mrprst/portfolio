@@ -4,7 +4,11 @@
   text-align: left;
 }
 
-.content {
+.title::first-letter {
+  text-transform:capitalize;
+}
+
+.description {
   width: 100%;
   text-align: left;
   padding: 0px;
@@ -12,9 +16,13 @@
 
 .projectdetails {
   padding-right: 2rem;
-  padding-left: 2rem;
 }
 
 .logos {
   display: flex;
+  padding-top: 1rem;
+}
+
+.logo {
+  margin-right: 1rem;
 }

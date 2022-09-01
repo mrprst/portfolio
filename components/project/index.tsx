@@ -1,37 +1,28 @@
-import React from 'react';
+import React from 'react'
 import classes from './Project.module.scss'
 import { Code } from '@mantine/core'
 
-interface Spec {
-  title: string;
-  content: string
+type Spec = {
+  title: string,
+  description: string,
+  stack: Array<string>,
+  github: string,
+  website: string
 }
 
-function Project(props:Spec) {
+function Project(props: Spec) {
   return (
     <div className={classes.projectdetails}>
       <h2 className={classes.title}>{props.title}</h2>
-      <p className={classes.content}>
-      {props.content}
-        {/* As a music and vinyl lover, I use to spend a LOT of time on Discogs, one
-        of the biggest music database and marketplace. If you don't know it, it
-        is basically a wiki where you can browse infinitely from artists to
-        labels, coutries, genres, etc. I got this idea of replicate the wiki
-        system to build a french recipe wiki database. The idea behind this is
-        to allow the user to get inspirations from a variety of elements from
-        ingredients, countries and regions just by clicking on it. We chose to
-        classify our recipes into families of dishes. Each dish has a variety of
-        recipes (or variants) regarding its ingredients or countries. */}
-      </p>
+      <p className={classes.description}>{props.description}</p>
       <div className={classes.languages}>
-        <Code>Ruby on Rails</Code>
-        <Code>Javascript</Code>
-        <Code>Ananas</Code>
+        {props.stack.map((techno) => (
+          <Code>{techno}</Code>
+        ))}
       </div>
       <div className={classes.logos}>
-        <p>A</p>
-        <p>B</p>
-        <p>O</p>
+        <a className={classes.logo} href={props.github}><img src='\github.svg' /></a>
+        <a className={classes.logo} href={props.website}><img src='\link.svg' /></a>
       </div>
     </div>
   )
