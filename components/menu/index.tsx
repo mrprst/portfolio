@@ -21,14 +21,11 @@ function Menu() {
           contact
         </div>
       </Link>
-      <a
-        href="/mathias-prost-resume.pdf"
-        target="_blank"
-      >
+      <Link href="/mathias-prost-resume.pdf">
         <div className={classes.a}>
           resume
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

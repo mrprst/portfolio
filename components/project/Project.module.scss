@@ -14,9 +14,6 @@
   padding: 0px;
 }
 
-.projectdetails {
-  padding-right: 2rem;
-}
 
 .logos {
   display: flex;
@@ -25,4 +22,11 @@
 
 .logo {
   margin-right: 1rem;
+}
+
+@media (max-width: 600px) {
+  .title, .description, .languages, .logos  {
+    padding: 0px 40px;
+  }
+
 }

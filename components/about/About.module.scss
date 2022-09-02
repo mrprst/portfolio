@@ -1,10 +1,13 @@
 .title {
   width: 100%;
   text-align: left;
+  padding: 0px 100px 0px 50px
 }
 
 .content {
   display: flex;
+  padding: 0px 100px 0px 50px
+
 }
 
 .text {
@@ -22,6 +25,10 @@
 
 @media (max-width: 800px) {
 
+  .title {
+    padding: 0px 40px;
+  }
+
   .text {
     width: 100%;
     padding-right: 0;
@@ -29,6 +36,7 @@
 
   .content {
     flex-direction: column;
+    padding: 0px 40px;
   }
 
   .containerpic {

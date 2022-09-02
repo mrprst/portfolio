@@ -14,7 +14,9 @@ export default function Tagline() {
           Here, you will find everything I've done in my life that might
           interest you if you want us to work together.
         </p>
-        <Button title="yoyoyo" size="lg" />
+        <div className={classes.button}>
+          <Button title="yoyoyo" size="lg" />
+        </div>
       </div>
   )
 }
