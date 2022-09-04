@@ -4,10 +4,16 @@ import Button from '../button'
 import Projectpic from '../projectpic/'
 import Project from '../project/'
 import { projectData } from '../../public/projectsdata'
+import { projectdataFR } from '../../public/projectsdataFR'
+import { useRouter } from 'next/router'
 
-function Projects() {
+type Language = {
+  file: any[]
+}
+
+function Projects(props: Language) {
   const [projectkey, setProjectkey] = useState(0)
-
+  console.log(props.file)
   return (
     <div id="projects" className={classes.container}>
       <h1 className={classes.title}>Projects</h1>
@@ -24,7 +30,23 @@ function Projects() {
           </div>
         </div>
         <div className={classes.project}>
-          {projectData.map((data, key) => {
+          {/* {props.file[1].map((data: { title: string; description: string; stack: string[]; github: string; website: string }, key: React.Key) => {
+            if (key === projectkey) {
+              return (
+                <div key={key} className={classes.projectcontainer}>
+                  <Project
+                    title={data.title}
+                    description={data.description}
+                    stack={data.stack}
+                    github={data.github}
+                    website={data.website}
+                  />
+                  <Projectpic project={data.title} link={data.website} />
+                </div>
+              )
+            }
+          })} */}
+          {props.file[1].map((data, key) => {
             if (key === projectkey) {
               return (
                 <div key={key} className={classes.projectcontainer}>

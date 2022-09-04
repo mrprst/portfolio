@@ -16,8 +16,10 @@ function Project(props: Spec) {
       <h2 className={classes.title}>{props.title}</h2>
       <p className={classes.description}>{props.description}</p>
       <div className={classes.languages}>
-        {props.stack.map((techno) => (
-          <Code>{techno}</Code>
+        {props.stack.map((techno, key) => (
+          <span key={key}>
+            <Code>{techno}</Code>
+          </span>
         ))}
       </div>
       <div className={classes.logos}>
