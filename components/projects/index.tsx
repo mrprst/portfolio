@@ -10,6 +10,7 @@ type Language = {
 }
 
 function Projects(props: Language) {
+  const { locale } = useRouter();
   const [data, setData] = useState(props.file);
   const [projectkey, setProjectkey] = useState(0)
   const [selectedproject, setSelectedproject] = useState({
@@ -23,7 +24,6 @@ function Projects(props: Language) {
 
   useEffect( () => {
     setData(props.file);
-    console.log(props.file)
   }, [props.file]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function Projects(props: Language) {
         setSelectedproject(object1[Object.keys(object1)[key]])
       }
     })
-  }, [projectkey]);
+  }, [projectkey, locale]);
 
   return (
     <div id="projects" className={classes.container}>
@@ -52,11 +52,7 @@ function Projects(props: Language) {
         <div className={classes.project}>
           <div className={classes.projectcontainer}>
             <Project
-              title={selectedproject.title}
-              description={selectedproject.description}
-              stack={selectedproject.stack}
-              github={selectedproject.github}
-              website={selectedproject.website}
+              project={selectedproject}
             />
             <Projectpic project={selectedproject.title} link={selectedproject?.website} />
           </div>

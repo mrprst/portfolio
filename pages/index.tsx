@@ -16,6 +16,7 @@ import { projectdataES } from '../public/projectsdataES'
 
 const Home: NextPage = () => {
   const { locale, locales, defaultLocale, asPath } = useRouter();
+  const [mainData, setMainData] = useState(projectdataEN)
 
   useEffect(() => {
     switch (locale) {
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
         break
       default:
     }
-  },[mainData])
+  },[locale])
 
   return (
     <>
@@ -71,7 +72,7 @@ const Home: NextPage = () => {
       </div>
       <Tagline />
       <About />
-      <Projects file={mainData}/>
+      <Projects file={mainData} />
       <Contact />
     </>
   )
