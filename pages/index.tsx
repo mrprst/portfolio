@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import About from '../components/about'
@@ -9,29 +10,28 @@ import Grid from '../components/Grid'
 import Contact from '../components/contact'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { projectDataEN } from '../public/projectsdata'
+import { projectdataEN } from '../public/projectsdata'
 import { projectdataFR } from '../public/projectsdataFR'
 import { projectdataES } from '../public/projectsdataES'
 
 const Home: NextPage = () => {
   const { locale, locales, defaultLocale, asPath } = useRouter();
-  let mainData
-  const language = locale
 
-  switch (language) {
-    case 'es-ES':
-      mainData = projectdataES
-      break
-    case 'fr-FR':
-      mainData = projectdataFR
-      break
-    case 'en-US':
-      mainData = projectDataEN
-      break
-    default:
-      console.log(locale)
-  }
-  console.log(mainData)
+  useEffect(() => {
+    switch (locale) {
+      case 'es-ES':
+        setMainData(projectdataES)
+        break
+      case 'fr-FR':
+        setMainData(projectdataFR)
+        break
+      case 'en-US':
+        setMainData(projectdataEN)
+        break
+      default:
+    }
+  },[mainData])
+
   return (
     <>
       <Head>
@@ -58,14 +58,14 @@ const Home: NextPage = () => {
             {locale}
           </span>
         </div>
-        <Link activeClassName={locale === 'es-ES'} href={asPath} locale="es-ES">
+        <Link href={asPath} locale="es-ES">
           es-ES
         </Link>
 
-        <Link activeClassName={locale === 'en-US'} href={asPath} locale="en-US">
+        <Link href={asPath} locale="en-US">
           en-US
         </Link>
-        <Link activeClassName={locale === 'fr-FR'} href={asPath} locale="fr-FR">
+        <Link href={asPath} locale="fr-FR">
           fr-FR
         </Link>
       </div>

@@ -3,17 +3,37 @@ import classes from './Projects.module.scss'
 import Button from '../button'
 import Projectpic from '../projectpic/'
 import Project from '../project/'
-import { projectData } from '../../public/projectsdata'
-import { projectdataFR } from '../../public/projectsdataFR'
 import { useRouter } from 'next/router'
 
 type Language = {
-  file: any[]
+  file: object
 }
 
 function Projects(props: Language) {
+  const [data, setData] = useState(props.file);
   const [projectkey, setProjectkey] = useState(0)
-  console.log(props.file)
+  const [selectedproject, setSelectedproject] = useState({
+    github: "",
+    description: "",
+    stack: [""],
+    title: "",
+    website: ""
+  })
+  const object1 = props.file.projects
+
+  useEffect( () => {
+    setData(props.file);
+    console.log(props.file)
+  }, [props.file]);
+
+  useEffect(() => {
+    Object.keys(object1).map((data, key) => {
+      if (key === projectkey) {
+        setSelectedproject(object1[Object.keys(object1)[key]])
+      }
+    })
+  }, [projectkey]);
+
   return (
     <div id="projects" className={classes.container}>
       <h1 className={classes.title}>Projects</h1>
@@ -30,38 +50,16 @@ function Projects(props: Language) {
           </div>
         </div>
         <div className={classes.project}>
-          {/* {props.file[1].map((data: { title: string; description: string; stack: string[]; github: string; website: string }, key: React.Key) => {
-            if (key === projectkey) {
-              return (
-                <div key={key} className={classes.projectcontainer}>
-                  <Project
-                    title={data.title}
-                    description={data.description}
-                    stack={data.stack}
-                    github={data.github}
-                    website={data.website}
-                  />
-                  <Projectpic project={data.title} link={data.website} />
-                </div>
-              )
-            }
-          })} */}
-          {props.file[1].map((data, key) => {
-            if (key === projectkey) {
-              return (
-                <div key={key} className={classes.projectcontainer}>
-                  <Project
-                    title={data.title}
-                    description={data.description}
-                    stack={data.stack}
-                    github={data.github}
-                    website={data.website}
-                  />
-                  <Projectpic project={data.title} link={data.website} />
-                </div>
-              )
-            }
-          })}
+          <div className={classes.projectcontainer}>
+            <Project
+              title={selectedproject.title}
+              description={selectedproject.description}
+              stack={selectedproject.stack}
+              github={selectedproject.github}
+              website={selectedproject.website}
+            />
+            <Projectpic project={selectedproject.title} link={selectedproject?.website} />
+          </div>
         </div>
       </div>
     </div>

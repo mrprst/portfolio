@@ -5,8 +5,8 @@ const nextConfig = {
     // providing the locales supported by your application
     locales: ['en-US', 'es-ES', 'fr-FR'],
     //  default locale used when the non-locale paths are visited
-    defaultLocale: 'en-US',
+    defaultLocale: 'fr-FR',
   },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;
