@@ -24,15 +24,15 @@ function Projects(props: Language) {
 
   useEffect( () => {
     setData(props.file);
-  }, [props.file]);
-
-  useEffect(() => {
-    Object.keys(object1).map((data, key) => {
+    Object.keys(data.projects).map((data, key) => {
       if (key === projectkey) {
         setSelectedproject(object1[Object.keys(object1)[key]])
       }
     })
-  }, [projectkey, locale]);
+  }, [props.file,locale,projectkey]);
+
+
+  console.log(selectedproject)
 
   return (
     <div id="projects" className={classes.container}>

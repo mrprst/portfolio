@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/prefer-default-export
 export const projectdataEN = {
-  "title": "titzrle",
+  "taglineTitle": "Bonjour !<br />I am Mathias, fullstack web-developer.",
+  "taglineSubtitle": "Here, you will find everything I\'ve done in my life that might interest you if you want us to work together.",
   "projects": {
     "peps": {
       "title": "peps in english",

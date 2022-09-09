@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           fr-FR
         </Link>
       </div>
-      <Tagline />
+      <Tagline file={mainData} />
       <About />
       <Projects file={mainData} />
       <Contact />

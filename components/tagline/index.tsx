@@ -1,18 +1,28 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { Box, Code, Text } from '@mantine/core'
 import classes from './Tagline.module.scss'
 import Button from '../button'
 
-export default function Tagline() {
+type Language = {
+  file: object
+}
+
+export default function Tagline(props: Language) {
+  const [data, setData] = useState({
+    taglineTitle: "",
+    taglineSubtitle: "",
+  })
+
+  useEffect( () => {
+    setData(props.file);
+  }, [props.file]);
+
   return (
       <div className={classes.container}>
-        <h1 className={classes.title}>
-          Bonjour !<br />I am Mathias, fullstack web-developer.
-        </h1>
-
+        <h1 className={classes.title} dangerouslySetInnerHTML={ { __html: data.taglineTitle } }></h1>
         <p className={classes.content}>
-          Here, you will find everything I've done in my life that might
-          interest you if you want us to work together.
+          {data.taglineSubtitle}
         </p>
         <div className={classes.button}>
           <Button title="yoyoyo" size="lg" />

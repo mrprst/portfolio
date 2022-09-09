@@ -16,7 +16,9 @@ function Project(props: Spec) {
     setData(props.project);
   }, [props.project,locale]);
 
-  console.log(data)
+  // console.log(locale)
+  // console.log(props.project)
+
   return (
     <div className={classes.projectdetails}>
       <h2 className={classes.title}>{data.title}</h2>
