@@ -12,6 +12,7 @@ export default function Tagline(props: Language) {
   const [data, setData] = useState({
     taglineTitle: "",
     taglineSubtitle: "",
+    taglineButton: "",
   })
 
   useEffect( () => {
@@ -25,7 +26,7 @@ export default function Tagline(props: Language) {
           {data.taglineSubtitle}
         </p>
         <div className={classes.button}>
-          <Button title="yoyoyo" size="lg" />
+          <Button title={data.taglineButton} size="lg" />
         </div>
       </div>
   )

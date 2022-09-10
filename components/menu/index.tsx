@@ -1,33 +1,27 @@
-import React from 'react';
-import classes from "./Menu.module.scss";
-import Link from 'next/link';
-
+import React from 'react'
+import classes from './Menu.module.scss'
+import Link from 'next/link'
+import ModalButton from '../languageswitch'
+import LanguageSwitch from '../languageswitch'
 
 function Menu() {
   return (
-    <div className={classes.menu} >
+    <div className={classes.menu}>
       <Link href="#about">
-        <div className={classes.a}>
-          about
-        </div>
+        <div className={classes.a}>about</div>
       </Link>
       <Link href="#projects">
-        <div className={classes.a}>
-          projects
-        </div>
+        <div className={classes.a}>projects</div>
       </Link>
       <Link href="#contact">
-        <div className={classes.a}>
-          contact
-        </div>
+        <div className={classes.a}>contact</div>
       </Link>
       <Link href="/mathias-prost-resume.pdf">
-        <div className={classes.a}>
-          resume
-        </div>
+        <div className={classes.a}>resume</div>
       </Link>
+      <LanguageSwitch />
     </div>
-  );
+  )
 }
 
-export default Menu;
+export default Menu
