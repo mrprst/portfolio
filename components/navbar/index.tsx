@@ -31,8 +31,6 @@ export default function Navbar() {
     }
   }, [])
 
-
-
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>

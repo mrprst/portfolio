@@ -8,7 +8,7 @@ type Language = {
   file: object
 }
 
-export default function Tagline(props: Language) {
+function Tagline(props: Language) {
   const [data, setData] = useState({
     taglineTitle: "",
     taglineSubtitle: "",
@@ -31,3 +31,5 @@ export default function Tagline(props: Language) {
       </div>
   )
 }
+
+export default Tagline

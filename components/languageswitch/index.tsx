@@ -10,50 +10,34 @@ function LanguageSwitch() {
   const { locale, asPath } = useRouter()
   const [opened, setOpened] = useState(false)
 
-  console.log(opened)
-
   return (
     <div className={classes.container}>
-      <Modal
-        opened={opened}
-        onClose={() => setOpened(false)}
-        title="Introduce yourself!"
-      >
-        <div>
+      <div className={classes.languages}>
+        <Link href={asPath} locale="en-US">
           <div
-            style={{
-              padding: '4px',
-              marginRight: '4px',
-            }}
+            className={locale === 'en-US' ? classes.active : classes.link}
+            onClick={() => setOpened(false)}
           >
-            <span>Current Language: </span>
-            <span
-              style={{
-                borderRadius: '3px',
-                backgroundColor: 'blue',
-                color: 'white',
-                padding: '2px',
-              }}
-            >
-              {locale}
-            </span>
+            en
           </div>
-          <Link href={asPath} locale="es-ES">
-            <p onClick={() => setOpened(false)}>es-ES</p>
-          </Link>
-
-          <Link href={asPath} locale="en-US">
-            <p onClick={() => setOpened(false)}>en-US</p>
-          </Link>
-          <Link href={asPath} locale="fr-FR">
-            <p onClick={() => setOpened(false)}>fr-FR</p>
-          </Link>
-        </div>
-      </Modal>
-
-      <Group position="center">
-        <Image className={classes.logo} onClick={() => setOpened(true)} src="/language.svg" alt="language switch" />
-      </Group>
+        </Link>
+        <Link href={asPath} locale="es-ES">
+          <div
+            className={locale === 'es-ES' ? classes.active : classes.link}
+            onClick={() => setOpened(false)}
+          >
+            es
+          </div>
+        </Link>
+        <Link href={asPath} locale="fr-FR">
+          <div
+            className={locale === 'fr-FR' ? classes.active : classes.link}
+            onClick={() => setOpened(false)}
+          >
+            fr
+          </div>
+        </Link>
+      </div>
     </div>
   )
 }
