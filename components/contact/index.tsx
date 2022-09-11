@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '../button'
 import classes from './Contact.module.scss'
+
+type Language = {
+  file: object
+}
 
 export default function Contact() {
   return (

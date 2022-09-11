@@ -1,6 +1,10 @@
 // eslint-disable-next-line import/prefer-default-export
 export const projectdataFR = {
-  "title": "titzrle",
+  "taglineTitle": "Bonjour !<br />Je suis Mathias, développeur web fullstack.",
+  "taglineSubtitle": "Vous trouverez ici tout ce que j'ai fait dans ma vie qui puisse vous intéresser si vous souhaitez qu'on collabore.",
+  "taglineButton": "Voir mon CV",
+  "aboutTitle": "A propos",
+  "aboutText": "Après plusieurs années passées à gérer des sites e-commerce je suis désormais web developpeur.<br /><br />Dans ma vie passée, j'ai eu la chance de créer un disquaire en ligne et service de gravure de vinyle, travailler pour un leader de la tech audio française, un gigantesque site e-commerce et une major du disque. Ces années ont fait de moi un spécialiste e-commerce. <br /><br />Actuellement freelance, je suis ouvert à des opportunités contractuelles en Europe, me permettant de travailler en télétravail.",
   "projects": {
     "peps": {
       "title": "peps en Francais",

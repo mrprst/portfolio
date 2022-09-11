@@ -1,6 +1,10 @@
 // eslint-disable-next-line import/prefer-default-export
 export const projectdataES = {
-  "title": "titzrle",
+  "taglineTitle": "Bonjour !<br />Soy Mathias, desarollador web fullstack.",
+  "taglineSubtitle": "Puede encontrar aqui todo lo que he haciendo si quiere que trabajemos juntos.",
+  "taglineButton": "Ver my CV",
+  "aboutTitle": "About",
+  "aboutText": "I used to lead e-commerce projects but I'm now web developer.<br /><br />In my past life, I had the chance of creating an online record shop and vinyl cuting service, work for a french audio/tech leader, a huge e-commerce website and one of the biggest music labels. All things considered, I have been specialized in e-commerce during all those years.<br /><br />I am currently working in France as freelancer but open to any opportunities allowing me to work remotly in EU.",
   "projects": {
     "peps": {
       "title": "peps en espanol",

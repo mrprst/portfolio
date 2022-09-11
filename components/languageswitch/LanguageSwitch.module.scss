@@ -1,0 +1,24 @@
+.container {
+  margin: 20px 10px 10px;
+  cursor: pointer;
+}
+
+.languages {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 1.5rem !important;
+}
+
+.link {
+  cursor: pointer;
+  color: var(--primary);
+  margin: 5px;
+}
+
+.active {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--primary);
+  margin: 5px;
+}
