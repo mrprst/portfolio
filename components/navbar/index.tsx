@@ -3,33 +3,27 @@ import { Burger } from '@mantine/core'
 import Link from 'next/link'
 import classes from './NavBar.module.scss'
 import Menu from '../menu'
-import { useRouter } from 'next/router';
-import { NativeSelect } from '@mantine/core';
+import { useRouter } from 'next/router'
+import { NativeSelect } from '@mantine/core'
 
-export default function Navbar() {
-  const { locale, asPath } = useRouter();
+const Navbar: React.FC = () => {
+  const [showmenu, setShowmenu] = React.useState(false)
   const [opened, setOpened] = useState(true)
-  const [showmenu, setShowmenu] = useState(false)
   const title = opened ? 'Close navigation' : 'Open navigation'
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('')
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const isNarrowScreen = window.matchMedia('(max-width: 600px)')
       isNarrowScreen.addEventListener('change', (e) => {
-        if (e.matches) {
-          setOpened(false)
-        } else {
-          setOpened(true)
-        }
+        e.matches ? setOpened(false) : setOpened(true)
       })
-      if (isNarrowScreen.matches) {
-        setOpened(false)
-      } else {
-        setOpened(true)
-      }
+      isNarrowScreen.matches ? setOpened(false) : setOpened(true)
     }
-  }, [])
+    showmenu ? setOpened(true) : setOpened(false)
+  }, [showmenu])
+
+  console.log(showmenu)
 
   return (
     <header className={classes.header}>
@@ -42,13 +36,18 @@ export default function Navbar() {
         <div className={classes.bg}>
           <Burger
             opened={opened}
-            onClick={() => setOpened((o) => !o)}
+            onClick={() => {
+              showmenu ? setShowmenu(false) : setShowmenu(true)
+              setOpened((o) => !o)
+            }}
             title={title}
             color="#1C5F42"
           />
         </div>
-        {opened ? <Menu /> : null}
+        {opened ? <Menu setShowmenu={setShowmenu} /> : null}
       </nav>
     </header>
   )
 }
+
+export default Navbar

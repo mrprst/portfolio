@@ -31,9 +31,6 @@ function Projects(props: Language) {
     })
   }, [props.file,locale,projectkey]);
 
-
-  console.log(selectedproject)
-
   return (
     <div id="projects" className={classes.container}>
       <h1 className={classes.title}>Projects</h1>
