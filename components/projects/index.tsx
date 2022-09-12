@@ -18,7 +18,8 @@ function Projects(props: Language) {
     description: "",
     stack: [""],
     title: "",
-    website: ""
+    website: "",
+    image: ""
   })
   const object1 = props.file.projects
 
@@ -51,7 +52,7 @@ function Projects(props: Language) {
             <Project
               project={selectedproject}
             />
-            <Projectpic project={selectedproject.title} link={selectedproject?.website} />
+            <Projectpic project={selectedproject.title} link={selectedproject?.website} image={selectedproject.image} />
           </div>
         </div>
       </div>
