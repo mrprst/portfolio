@@ -19,11 +19,13 @@ const Navbar: React.FC = () => {
       isNarrowScreen.addEventListener('change', (e) => {
         e.matches ? setOpened(false) : setOpened(true)
       })
-      isNarrowScreen.matches ? setOpened(false) : setOpened(true)
+      if (isNarrowScreen.matches) {
+        setOpened(false)
+        showmenu ? setOpened(true) : setOpened(false)
+      }
     }
-    showmenu ? setOpened(true) : setOpened(false)
   }, [showmenu])
-  
+
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
