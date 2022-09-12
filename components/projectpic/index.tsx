@@ -7,11 +7,12 @@ import peps from '../../public/peps.jpg'
 type Props = {
   project: string
   link: string
+  image: string
 }
 
 export default function Projectpic(props: Props) {
   const divImage = {
-    backgroundImage: 'url(/' + props.project + '.jpg)',
+    backgroundImage: 'url(/' + props.image,
   }
 
   return (
