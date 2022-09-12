@@ -23,6 +23,14 @@ export const projectdataES = {
       "github": "https://github.com/SLAF-Team/SLAF_Project/",
       "website": "http://syndicatdelutteantifranglais.club/",
       "image": "slaf.jpg"
-    }
-  }
+    },
+    "IMR": {
+      "title": "In Medias Res",
+      "description":
+        "TBC",
+      "stack": ["vuejs", "radioco"],
+      "github": "https://github.com/alafanechere/imr/",
+      "website": "https://imr.party/",
+      "image": ""
+    }  }
 }

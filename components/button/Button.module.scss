@@ -1,5 +1,6 @@
 .buttonLg {
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   background-color: white;
@@ -53,11 +54,3 @@
   color: var(--primary);
 }
 
-.btnTest {
-  display: inline-block;
-  padding: 1rem 3rem;
-  border: 1px solid var(--border-color);
-  box-shadow: 0.4rem 0.4rem 0px 0px white,
-    0.4rem 0.4rem 0 0.1rem var(--border-color);
-  transition: 0.2s ease-out;
-}

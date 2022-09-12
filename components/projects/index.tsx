@@ -52,7 +52,6 @@ function Projects(props: Language) {
             <Project
               project={selectedproject}
             />
-            <Projectpic project={selectedproject.title} link={selectedproject?.website} image={selectedproject.image} />
           </div>
         </div>
       </div>

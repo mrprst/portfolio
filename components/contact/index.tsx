@@ -8,7 +8,7 @@ type Language = {
 
 export default function Contact() {
   return (
-    <div id='contacts' className={classes.container}>
+    <div id='contact' className={classes.container}>
       <h1 className={classes.title}>Contact</h1>
       <p>If you wish to contact me, please click on the button below</p>
       <Button title="Email" size="sm" />

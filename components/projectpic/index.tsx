@@ -16,7 +16,7 @@ export default function Projectpic(props: Props) {
   }
 
   return (
-    <a className={classes.link} href={props.link}>
+    <a className={classes.link} href={props.link} target="_blank">
       <div style={divImage} className={classes.projectpic}></div>
     </a>
   )
