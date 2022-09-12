@@ -7,13 +7,12 @@ import { useRouter } from 'next/router'
 import { NativeSelect } from '@mantine/core'
 
 const Navbar: React.FC = () => {
-  const [showmenu, setShowmenu] = React.useState(true)
+  const [showmenu, setShowmenu] = React.useState()
   const [opened, setOpened] = useState(true)
   const title = opened ? 'Close navigation' : 'Open navigation'
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    showmenu ? setOpened(true) : setOpened(false)
     if (typeof window !== 'undefined') {
       const isNarrowScreen = window.matchMedia('(max-width: 600px)')
       isNarrowScreen.addEventListener('change', (e) => {
