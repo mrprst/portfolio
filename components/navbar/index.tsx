@@ -7,30 +7,38 @@ import { useRouter } from 'next/router'
 import { NativeSelect } from '@mantine/core'
 
 const Navbar: React.FC = () => {
-  const [showmenu, setShowmenu] = React.useState(false)
+  const [showmenu, setShowmenu] = React.useState(true)
   const [opened, setOpened] = useState(true)
   const title = opened ? 'Close navigation' : 'Open navigation'
   const [value, setValue] = useState('')
 
   useEffect(() => {
+    showmenu ? setOpened(true) : setOpened(false)
     if (typeof window !== 'undefined') {
       const isNarrowScreen = window.matchMedia('(max-width: 600px)')
       isNarrowScreen.addEventListener('change', (e) => {
         e.matches ? setOpened(false) : setOpened(true)
       })
-      isNarrowScreen.matches ? setOpened(false) : setOpened(true)
+      if (isNarrowScreen.matches) {
+        setOpened(false)
+        showmenu ? setOpened(true) : setOpened(false)
+      }
     }
-    showmenu ? setOpened(true) : setOpened(false)
   }, [showmenu])
-
-  console.log(showmenu)
 
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
         <div>
           <Link href="/">
-            <div className={classes.logo}>MP</div>
+            <div
+              onClick={() => {
+                showmenu ? setShowmenu(false) : setShowmenu(true)
+              }}
+              className={classes.logo}
+            >
+              MP
+            </div>
           </Link>
         </div>
         <div className={classes.bg}>
