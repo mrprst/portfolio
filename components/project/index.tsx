@@ -37,10 +37,10 @@ function Project(props: Spec) {
       </div>
       <div className={classes.logos}>
         <a className={classes.logo} href={data.github}>
-          <img src="\github.svg" />
+          <img src="\images/github.svg" />
         </a>
         <a className={classes.logo} href={data.website}>
-          <img src="\link.svg" />
+          <img src="\images/link.svg" />
         </a>
       </div>
     </div>

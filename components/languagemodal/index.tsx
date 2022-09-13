@@ -32,7 +32,7 @@ function LanguageModal() {
         <Image
           className={classes.logo}
           onClick={() => setOpened(true)}
-          src="/language.svg"
+          src="/images/language.svg"
           alt="language switch"
         />
       </Group>

@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import classes from './Projectpic.module.scss'
-import slaf from '../../public/slaf.jpg'
-import peps from '../../public/peps.jpg'
+import slaf from '../../public/images/slaf.jpg'
+import peps from '../../public/images/peps.jpg'
 
 type Props = {
   project: string
@@ -12,7 +12,7 @@ type Props = {
 
 export default function Projectpic(props: Props) {
   const divImage = {
-    backgroundImage: 'url(/' + props.image,
+    backgroundImage: 'url(/images/' + props.image,
   }
 
   return (
