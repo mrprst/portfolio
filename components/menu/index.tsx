@@ -35,7 +35,7 @@ function Menu({ setShowmenu }) {
           contact
         </div>
       </Link>
-      <Link href="/mathias-prost-resume.pdf">
+      <Link href={"/mathias-prost-resume.pdf"} locale={false}>
         <div onClick={() => setShowmenu(false)} className={classes.a}>
           resume
         </div>

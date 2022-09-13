@@ -7,12 +7,12 @@ export default function Sidebar() {
   return (
     <div className={classes.sidebar}>
       <ul className={classes.social}>
-        <li>
+        <li className={classes.logo}>
           <Link href="https://github.com/mrprst">
             <Image src="/github.svg" alt="github profile" />
           </Link>
         </li>
-        <li>
+        <li className={classes.logo}>
           <Link href="https://www.linkedin.com/in/mathiasprost/">
             <Image src="/linkedin.svg" alt="linkedin profile" />
           </Link>

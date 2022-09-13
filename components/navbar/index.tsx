@@ -3,14 +3,11 @@ import { Burger } from '@mantine/core'
 import Link from 'next/link'
 import classes from './NavBar.module.scss'
 import Menu from '../menu'
-import { useRouter } from 'next/router'
-import { NativeSelect } from '@mantine/core'
 
 const Navbar: React.FC = () => {
   const [showmenu, setShowmenu] = React.useState()
   const [opened, setOpened] = useState(true)
   const title = opened ? 'Close navigation' : 'Open navigation'
-  const [value, setValue] = useState('')
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
