@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@mantine/core'
 import classes from './Footer.module.scss'
 
-export default function Footer() {
+function Footer() {
   return (
     <Box
       component="footer"
@@ -18,3 +18,5 @@ export default function Footer() {
     </Box>
     )
 }
+
+export default Footer

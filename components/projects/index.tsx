@@ -37,13 +37,13 @@ function Projects(props: Language) {
       <h1 className={classes.title}>Projects</h1>
       <div>
         <div className={classes.buttons}>
-          <div onClick={() => setProjectkey(0)}>
+          <div className={classes.button} onClick={() => setProjectkey(0)}>
             <Button title="Peps" size="sm" />
           </div>
-          <div onClick={() => setProjectkey(1)}>
+          <div className={classes.button} onClick={() => setProjectkey(1)}>
             <Button title="SLAF!" size="sm" />
           </div>
-          <div onClick={() => setProjectkey(2)}>
+          <div className={classes.button} onClick={() => setProjectkey(2)}>
             <Button title="IMR" size="sm" />
           </div>
         </div>

@@ -5,11 +5,15 @@ export const french = {
   "taglineButton": "Voir mon CV",
   "aboutTitle": "A propos",
   "aboutText": "Après plusieurs années passées à gérer des sites e-commerce je suis désormais web developpeur.<br /><br />Dans ma vie passée, j'ai eu la chance de créer un disquaire en ligne et service de gravure de vinyle, travailler pour un leader de la tech audio française, un gigantesque site e-commerce et une major du disque. Ces années ont fait de moi un spécialiste e-commerce. <br /><br />Actuellement freelance, je suis ouvert à des opportunités contractuelles en Europe, me permettant de travailler en télétravail.",
+  "profilepicCTA": "CV",
+  "contact": "On se connecte ?",
+  "contactText": "Pour discuter mission freelance, opportunités ou bien juste me poser une question, ça se passe sur ce gros bouton ci-dessous",
+  "contactCTA": "Oui, moi !",
   "projects": {
     "peps": {
       "title": "peps en Francais",
       "description":
-        "As a music and vinyl lover, I use to spend a LOT of time on Discogs, one of the biggest music database and marketplace. If you don't know it, it is basically a wiki where you can browse infinitely from artists to labels, coutries, genres, etc. I got this",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "stack": ["react.js", "next.js", "prisma"],
       "github": "https://github.com/SLAF-Team/Peps/",
       "website": "https://peps.life/",
@@ -18,7 +22,7 @@ export const french = {
     "slaf": {
       "title": "slaf en Francais",
       "description":
-        "This project was the first real project I got involved after my Ruby on Rails training. This website is an Urban Dictionnary-like franglish parodic translator. The overuse of buzzwords, especially in the startup echosystem might be borring sometimes, so we choose to shine light on their french equivalents. For the website design, we chose to give a brutalist and retro approach.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "stack": ["ruby", "rails"],
       "github": "https://github.com/SLAF-Team/SLAF_Project/",
       "website": "http://syndicatdelutteantifranglais.club/",
