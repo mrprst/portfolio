@@ -2,26 +2,21 @@ import React, { useState, useEffect } from 'react'
 import Button from '../button'
 import classes from './Contact.module.scss'
 
-type Language = {
-  file: object
+type LocaleProps = {
+  localeFile: {
+    contact: string;
+    contactText: string;
+    contactCTA: string
+  };
 }
 
-export default function Contact(props: Language) {
-  const [data, setData] = useState({
-    contact: "",
-    contactText: "",
-    contactCTA: "",
-  })
-
-  useEffect( () => {
-    setData(props.file);
-  }, [props.file]);
+export default function Contact({localeFile}: LocaleProps) {
 
   return (
     <div id='contact' className={classes.container}>
-      <h1 className={classes.title}>{data.contact}</h1>
-      <p>{data.contactText}</p>
-      <Button title={data.contactCTA} size="sm" />
+      <h1 className={classes.title}>{localeFile.contact}</h1>
+      <p>{localeFile.contactText}</p>
+      <Button title={localeFile.contactCTA} size="sm" />
     </div>
   )
 }

@@ -1,29 +1,26 @@
-import React, { useState, useEffect } from 'react'
 import classes from './About.module.scss'
 import Profilepic from '../profilepic'
 
-type Language = {
-  file: object
+type LocaleProps = {
+  localeFile: {
+    aboutTitle: string;
+    aboutText: string;
+    profilepicCTA: string
+  };
 }
 
-export default function About(props: Language) {
-  const [data, setData] = useState({
-    aboutTitle: "",
-    aboutText: "",
-    profilepicCTA: ""
-  })
-
-  useEffect( () => {
-    setData(props.file);
-  }, [props.file]);
+export default function About({localeFile}: LocaleProps) {
 
   return (
     <div id="about" className={classes.about}>
-      <h1 className={classes.title}>{data.aboutTitle}</h1>
+      <h1 className={classes.title}>{localeFile.aboutTitle}</h1>
       <div className={classes.content}>
-        <p className={classes.text} dangerouslySetInnerHTML={ { __html: data.aboutText } }></p>
+        <p
+          className={classes.text}
+          dangerouslySetInnerHTML={{ __html: localeFile.aboutText }}
+        ></p>
         <div className={classes.containerpic}>
-          < Profilepic cta={data.profilepicCTA}/>
+          <Profilepic cta={localeFile.profilepicCTA} />
         </div>
       </div>
     </div>

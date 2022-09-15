@@ -1,18 +1,18 @@
 import React from 'react';
 import classes from './Button.module.scss'
 
-interface Spec {
+interface SpecsProps {
   title: string;
   size: string
 }
 
-export default function Button (props:Spec) {
+export default function Button ({title, size}:SpecsProps) {
 
-  const computedClassName = props.size === 'lg' ? classes.buttonLg : classes.buttonSm;
+  const computedClassName = size === 'lg' ? classes.buttonLg : classes.buttonSm;
 
   return (
     <div className={computedClassName}>
-      <p className={classes.title}>{props.title}</p>
+      <p className={classes.title}>{title}</p>
     </div>
   );
 }

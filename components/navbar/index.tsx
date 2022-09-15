@@ -4,8 +4,8 @@ import Link from 'next/link'
 import classes from './NavBar.module.scss'
 import Menu from '../menu'
 
-const Navbar: React.FC = () => {
-  const [showmenu, setShowmenu] = React.useState()
+const Navbar = () => {
+  const [showmenu, setShowmenu] = useState<boolean | undefined>(undefined)
   const [opened, setOpened] = useState(true)
   const title = opened ? 'Close navigation' : 'Open navigation'
 

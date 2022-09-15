@@ -10,7 +10,7 @@ export const french = {
   "contactText": "Pour discuter mission freelance, opportunités ou bien juste me poser une question, ça se passe sur ce gros bouton ci-dessous",
   "contactCTA": "Oui, moi !",
   "projects": {
-    "peps": {
+    0: {
       "title": "peps en Francais",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -19,7 +19,7 @@ export const french = {
       "website": "https://peps.life/",
       "image": "peps.jpg"
     },
-    "slaf": {
+    1: {
       "title": "slaf en Francais",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -28,7 +28,7 @@ export const french = {
       "website": "http://syndicatdelutteantifranglais.club/",
       "image": "slaf.jpg"
     },
-    "IMR": {
+    2: {
       "title": "In Medias Res",
       "description":
         "TBC",
