@@ -1,5 +1,5 @@
 .profilepic {
-  background-image: url(../../public/profilepic.jpg);
+  background-image: url(../../public/images/profilepic.jpg);
   background-size: cover;
   border: 1.2px solid var(--primary);
   border-radius: 100%;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
   &:hover {
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
   border-radius: 100%;
   &:hover {
     background-color: var(--primary-transparent);
-    background-image: url(../../public/link.svg);
+    // background-image: url(../../public/images/resume.svg);
     color: white !important;
     font-size: 30px;
     font-weight: bold;

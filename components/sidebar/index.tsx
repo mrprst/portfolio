@@ -9,12 +9,12 @@ export default function Sidebar() {
       <ul className={classes.social}>
         <li className={classes.logo}>
           <Link href="https://github.com/mrprst">
-            <Image src="/github.svg" alt="github profile" />
+            <Image src="/images/github.svg" alt="github profile" />
           </Link>
         </li>
         <li className={classes.logo}>
           <Link href="https://www.linkedin.com/in/mathiasprost/">
-            <Image src="/linkedin.svg" alt="linkedin profile" />
+            <Image src="/images/linkedin.svg" alt="linkedin profile" />
           </Link>
         </li>
       </ul>

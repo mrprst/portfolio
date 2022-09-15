@@ -7,24 +7,24 @@ import Tagline from '../components/tagline'
 import Contact from '../components/contact'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { projectdataEN } from '../public/projectsdata'
-import { projectdataFR } from '../public/projectsdataFR'
-import { projectdataES } from '../public/projectsdataES'
+import { english } from '../public/locales/english'
+import { french } from '../public/locales/french'
+import { spanish } from '../public/locales/spanish'
 
 const Home: NextPage = () => {
   const { locale, locales, defaultLocale, asPath } = useRouter();
-  const [mainData, setMainData] = useState(projectdataEN)
+  const [mainData, setMainData] = useState(english)
 
   useEffect(() => {
     switch (locale) {
       case 'es-ES':
-        setMainData(projectdataES)
+        setMainData(spanish)
         break
       case 'fr-FR':
-        setMainData(projectdataFR)
+        setMainData(french)
         break
       case 'en-US':
-        setMainData(projectdataEN)
+        setMainData(english)
         break
       default:
     }

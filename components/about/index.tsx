@@ -10,6 +10,7 @@ export default function About(props: Language) {
   const [data, setData] = useState({
     aboutTitle: "",
     aboutText: "",
+    profilepicCTA: ""
   })
 
   useEffect( () => {
@@ -22,7 +23,7 @@ export default function About(props: Language) {
       <div className={classes.content}>
         <p className={classes.text} dangerouslySetInnerHTML={ { __html: data.aboutText } }></p>
         <div className={classes.containerpic}>
-          < Profilepic />
+          < Profilepic cta={data.profilepicCTA}/>
         </div>
       </div>
     </div>

@@ -1,14 +1,20 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
 import classes from './Profilepic.module.scss'
-import image from '../../public/profilepic.jpg'
-import slaf from '../../public/slaf.jpg'
-import link from '../../public/link.svg'
 
-export default function Profilepic () {
+type Language = {
+  cta: string
+}
+
+export default function Profilepic (props: Language) {
+  const [data, setData] = useState("")
+
+  useEffect( () => {
+    setData(props.cta);
+  }, [props.cta]);
+
   return (
     <div className={classes.profilepic}>
-      <div className={classes.link}></div>
+      <div className={classes.link}>{data}</div>
     </div>
   );
 }
