@@ -5,28 +5,35 @@ import { Code } from '@mantine/core'
 import { useRouter } from 'next/router'
 import Projectpic from '../projectpic/'
 
-type Spec = {
-  project: object
+type LocaleProps = {
+  project: {
+    github: string
+    description: string
+    stack: Array<string>
+    title: string
+    website: string
+    image: string
+  }
 }
 
-function Project(props: Spec) {
+function Project({project}: LocaleProps) {
   const { locale } = useRouter()
-  const [data, setData] = useState(props.project)
+  const [data, setData] = useState(project)
 
   useEffect(() => {
-    setData(props.project)
-  }, [props.project, locale])
+    setData(project)
+  }, [project, locale])
 
   return (
     <div className={classes.projectdetails}>
-      <h2 className={classes.title}>{data.title}</h2>
+      <h2 className={classes.title}>{project.title}</h2>
       <div>
         <Projectpic
-          project={data.title}
-          link={data?.website}
-          image={data.image}
+          project={project.title}
+          link={project.website}
+          image={project.image}
         />
-        <p className={classes.description}>{data.description}</p>
+        <p className={classes.description}>{project.description}</p>
       </div>
       <div className={classes.languages}>
         {data.stack.map((techno: string, key: number) => (
@@ -36,10 +43,10 @@ function Project(props: Spec) {
         ))}
       </div>
       <div className={classes.logos}>
-        <a className={classes.logo} href={data.github}>
+        <a className={classes.logo} href={project.github}>
           <img src="\images/github.svg" />
         </a>
-        <a className={classes.logo} href={data.website}>
+        <a className={classes.logo} href={project.website}>
           <img src="\images/link.svg" />
         </a>
       </div>

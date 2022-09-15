@@ -10,7 +10,7 @@ export const spanish = {
   "contactText": "Quieres discutir freelance, oportunidades o solo preguntarme algo, haga clic en el botón",
   "contactCTA": "¡ Aquiii !",
   "projects": {
-    "peps": {
+    0: {
       "title": "Peps",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -19,7 +19,7 @@ export const spanish = {
       "website": "https://peps.life/",
       "image": "peps.jpg"
     },
-    "slaf": {
+    1: {
       "title": "SLAF!",
       "description":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -28,7 +28,7 @@ export const spanish = {
       "website": "http://syndicatdelutteantifranglais.club/",
       "image": "slaf.jpg"
     },
-    "IMR": {
+    2: {
       "title": "In Medias Res",
       "description":
         "TBC",

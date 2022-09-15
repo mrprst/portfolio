@@ -5,15 +5,17 @@ import Link from 'next/link'
 import LanguageModal from '../languagemodal'
 import LanguageSwitch from '../languageswitch'
 
-function Menu({ setShowmenu }) {
+
+type Props = {
+  setShowmenu: any
+}
+
+function Menu({setShowmenu}: Props) {
   const [opened, setOpened] = useState(true)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const isNarrowScreen = window.matchMedia('(max-width: 600px)')
-      isNarrowScreen.addEventListener('change', (e) => {
-        e.matches ? setOpened(false) : setOpened(true)
-      })
       isNarrowScreen.matches ? setOpened(false) : setOpened(true)
     }
   }, [])
