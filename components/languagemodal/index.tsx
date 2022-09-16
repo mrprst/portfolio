@@ -10,6 +10,7 @@ function LanguageModal() {
   const { locale, asPath } = useRouter()
   const [opened, setOpened] = useState(false)
 
+  console.log(locale)
   return (
     <div className={classes.container}>
       <Modal styles={{ modal: {backgroundColor: 'var(--background)' } }} opened={opened} onClose={() => setOpened(false)}>
@@ -32,7 +33,7 @@ function LanguageModal() {
         <Image
           className={classes.logo}
           onClick={() => setOpened(true)}
-          src="/images/language.svg"
+          src={"/images/" + locale + ".svg"}
           alt="language switch"
         />
       </Group>
