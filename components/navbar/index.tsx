@@ -43,7 +43,7 @@ const Navbar = () => {
               }}
               className={classes.logo}
             >
-              MP
+              mrpr.st
             </div>
           </Link>
         </div>

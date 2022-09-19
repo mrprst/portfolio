@@ -18,9 +18,9 @@ function Tagline({ localeFile }: LocaleProps) {
 
   useEffect(() => {
     gsap.timeline()
-    .fromTo(q('h1'), {y: 0, opacity: 0}, {y: -30, opacity: 1 })
-    .fromTo(q('.sub'), {y: 0, opacity: 0}, {y: -30, opacity: 1 }, "<0.2>")
-    .fromTo(q('div'), {y: 0, opacity: 0}, {y: -30, opacity: 1 }, "<0.1")
+    .fromTo(q('h1'), {y: 30, opacity: 0}, {y: 0, opacity: 1 })
+    .fromTo(q('.sub'), {y: 30, opacity: 0}, {y: 0, opacity: 1 }, "<0.2>")
+    .fromTo(q('div'), {y: 30, opacity: 0}, {y: 0, opacity: 1 }, "<0.1")
   }, [])
 
   return (
