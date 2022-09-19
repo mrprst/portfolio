@@ -7,7 +7,7 @@ import Tagline from '../components/tagline'
 import Contact from '../components/contact'
 import Link from 'next/link'
 import classes from './index.module.scss'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { english } from '../public/locales/english'
 import { french } from '../public/locales/french'
 import { spanish } from '../public/locales/spanish'

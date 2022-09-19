@@ -26,20 +26,18 @@ function Projects({ localeFile }: LocaleProps) {
   const { locale } = useRouter()
   const [selectedprojectId, setSelectedprojectId] = useState(0)
   const [selectedproject, setSelectedproject] = useState({
-    github: "",
-    description: "",
-    stack: [""],
-    title: "",
-    website: "",
-    image: "",
+    github: '',
+    description: '',
+    stack: [''],
+    title: '',
+    website: '',
+    image: '',
   })
 
   useEffect(() => {
     Object.keys(localeFile.projects).map((data, key) => {
       if (key === selectedprojectId) {
         let index = +Object.keys(localeFile.projects)[key]
-        console.log("localeFile.projects[index]")
-        console.log(localeFile.projects[index])
         setSelectedproject(localeFile.projects[index])
       }
     })
@@ -50,13 +48,22 @@ function Projects({ localeFile }: LocaleProps) {
       <h1 className={classes.title}>Projects</h1>
       <div>
         <div className={classes.buttons}>
-          <div className={classes.button} onClick={() => setSelectedprojectId(0)}>
+          <div
+            className={classes.button}
+            onClick={() => setSelectedprojectId(0)}
+          >
             <Button title="Peps" size="sm" />
           </div>
-          <div className={classes.button} onClick={() => setSelectedprojectId(1)}>
+          <div
+            className={classes.button}
+            onClick={() => setSelectedprojectId(1)}
+          >
             <Button title="SLAF!" size="sm" />
           </div>
-          <div className={classes.button} onClick={() => setSelectedprojectId(2)}>
+          <div
+            className={classes.button}
+            onClick={() => setSelectedprojectId(2)}
+          >
             <Button title="IMR" size="sm" />
           </div>
         </div>
