@@ -1,6 +1,4 @@
 .box {
-  width: 100%;
-  height: calc(100vh - 100px);
   position: relative;
   display: grid;
   place-items: center;
@@ -8,8 +6,9 @@
 
 .targets {
   position: absolute;
-  width: 500%;
+  height: calc(400vh - 400px);
   display: flex;
+  flex-direction: column;
 }
 
 .stage {

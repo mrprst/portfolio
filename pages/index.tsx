@@ -7,7 +7,7 @@ import Tagline from '../components/tagline'
 import Contact from '../components/contact'
 import Link from 'next/link'
 import classes from './index.module.scss'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import { english } from '../public/locales/english'
 import { french } from '../public/locales/french'
 import { spanish } from '../public/locales/spanish'
@@ -37,13 +37,10 @@ const Home: NextPage = () => {
   useEffect(() => {
     let activeSlide = 0
     let oldSlide = 0
-    const slides = gsap.utils.toArray('.box')
-    const spanTargets = gsap.utils.toArray('span')
-    let tl: any;
-    const colors = gsap.utils.wrap(['#84c186', '#8b6c4c', '#39a3ee', '#ef9144'])
-    gsap.set(slides, { backgroundColor: colors })
+    let slides = gsap.utils.toArray(`div.${classes.box}`)
+    let tl: any
 
-    function slideAnim(e) {
+    function slideAnim(e: { deltaY: number }) {
       // if the container is animating the wheel won't work
       if (tl && tl.isActive()) {
         return
@@ -64,23 +61,17 @@ const Home: NextPage = () => {
       // if not at the beginning or end, we can animate the container
       // and the targets to the new position
       tl = gsap.timeline()
-      tl.to('#targets', {
-        xPercent: (-100 / slides.length) * activeSlide,
-        ease: 'power4.inOut',
+      tl.to(`div.${classes.targets}`, {
+        yPercent: (-100 / slides.length) * activeSlide,
+        transition: 1,
         onComplete: doCoolStuff,
       })
     }
 
     // listen for mousewheel scroll
-    window.addEventListener("wheel", event => slideAnim);
+    window.addEventListener('wheel', (event) => slideAnim(event))
 
-    function doCoolStuff() {
-      gsap.fromTo(
-        spanTargets[activeSlide],
-        { rotation: 0 },
-        { rotation: 360, transformOrigin: 'center center' }
-      )
-    }
+    function doCoolStuff() {}
   }, [])
 
   return (
