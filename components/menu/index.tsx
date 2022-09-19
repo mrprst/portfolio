@@ -21,7 +21,7 @@ function Menu({ setShowmenu }: Props) {
     }
     const items = gsap.utils.toArray(`div.${classes.a}`).reverse()
     const mainTimeline = gsap.timeline()
-    items.forEach((item: object, index: number) => {
+    items.forEach((item: any, index: number) => {
       let tl = gsap
         .timeline().fromTo(item, { opacity: 0 }, { opacity: 1 })
       mainTimeline.add(tl, index * 0.2)
