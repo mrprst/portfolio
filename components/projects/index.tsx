@@ -38,8 +38,6 @@ function Projects({ localeFile }: LocaleProps) {
     Object.keys(localeFile.projects).map((data, key) => {
       if (key === selectedprojectId) {
         let index = +Object.keys(localeFile.projects)[key]
-        console.log("localeFile.projects[index]")
-        console.log(localeFile.projects[index])
         setSelectedproject(localeFile.projects[index])
       }
     })

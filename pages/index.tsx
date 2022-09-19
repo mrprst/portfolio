@@ -5,7 +5,6 @@ import About from '../components/about'
 import Projects from '../components/projects'
 import Tagline from '../components/tagline'
 import Contact from '../components/contact'
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { english } from '../public/locales/english'
 import { french } from '../public/locales/french'
