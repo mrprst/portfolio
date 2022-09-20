@@ -22,6 +22,7 @@ gsap.registerPlugin(Observer)
 const Home: NextPage = () => {
   const { locale } = useRouter()
   const [mainData, setMainData] = useState(english)
+  const [activeSlide, setActiveSlide] = useState(0)
 
   useEffect(() => {
     switch (locale) {
@@ -70,8 +71,10 @@ const Home: NextPage = () => {
         duration: 1.4,
         ease: 'power2.out',
       })
+      setActiveSlide(activeSlide)
     }
 
+    console.log(activeSlide)
     // listen for mousewheel scroll
     Observer.create({
       wheelSpeed: 1,
