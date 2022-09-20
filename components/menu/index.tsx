@@ -11,11 +11,7 @@ type Props = {
   setShowmenu: any
 }
 
-type LocaleProps = {
-  [menu: string]: []
-}
-
-function Menu({ setShowmenu }: Props, { localeFile }: LocaleProps) {
+function Menu({ setShowmenu }: Props) {
   const { locale } = useRouter()
   const [opened, setOpened] = useState(true)
   const [menulocale, setMenuLocale] = useState([''])
@@ -34,6 +30,7 @@ function Menu({ setShowmenu }: Props, { localeFile }: LocaleProps) {
       mainTimeline.add(tl, index * 0.2)
     })
   }, [])
+  
 
   useEffect(() => {
     switch (locale) {
