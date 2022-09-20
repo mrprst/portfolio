@@ -1,13 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Burger } from '@mantine/core'
 import Link from 'next/link'
 import classes from './Navbar.module.scss'
 import Menu from '../menu'
+import { gsap } from 'gsap'
 
 const Navbar = () => {
   const [showmenu, setShowmenu] = useState<boolean | undefined>(undefined)
   const [opened, setOpened] = useState(true)
   const title = opened ? 'Close navigation' : 'Open navigation'
+  // const boxRef = useRef<HTMLInputElement>(null)
+  // const q = gsap.utils.selector(boxRef)
+
+  // useEffect(() => {
+  //   gsap
+  //     .timeline()
+  //     .from(q('div'), {opacity: 0})
+  //     .duration(1)
+  // }, [])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -33,7 +43,7 @@ const Navbar = () => {
               }}
               className={classes.logo}
             >
-              MP
+              mrpr.st
             </div>
           </Link>
         </div>
