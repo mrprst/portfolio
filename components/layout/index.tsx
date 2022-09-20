@@ -9,6 +9,7 @@ interface Props {
 }
 
 export default function Layout({ children }: Props) {
+  
   return (
     <div className={classes.layout}>
       <Navbar />

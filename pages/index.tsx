@@ -13,16 +13,12 @@ import { french } from '../public/locales/french'
 import { spanish } from '../public/locales/spanish'
 import { gsap } from 'gsap'
 import { Observer } from 'gsap/dist/Observer'
-import * as _ from 'lodash'
 
 gsap.registerPlugin(Observer)
 
 const Home: NextPage = () => {
-  const { locale, locales, defaultLocale, asPath } = useRouter()
+  const { locale } = useRouter()
   const [mainData, setMainData] = useState(english)
-  const boxRef = useRef<HTMLInputElement>(null)
-  const q = gsap.utils.selector(boxRef)
-  const containerRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     switch (locale) {

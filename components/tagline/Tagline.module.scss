@@ -5,6 +5,8 @@
   padding-bottom: 2rem;
   flex-direction: column;
   justify-content: flex-start;
+  border-bottom: 1px solid var(--primary);
+  width: 100%;
 }
 
 .title {
@@ -23,6 +25,7 @@
 
 .button {
   padding: 50px 100px 0px 100px;
+  
 }
 
 @media (max-width: 600px) {

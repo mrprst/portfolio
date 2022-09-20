@@ -43,7 +43,7 @@ const Navbar = () => {
               }}
               className={classes.logo}
             >
-              mrpr.st
+              <span className={classes.text}>mrpr.st</span>
             </div>
           </Link>
         </div>
