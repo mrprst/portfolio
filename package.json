@@ -9,6 +9,7 @@
     "@mantine/core": "^4.1.4",
     "@mantine/hooks": "^4.1.4",
     "@mantine/next": "^4.1.4",
+    "@types/lodash": "^4.14.185",
     "gsap": "^3.11.1",
     "i18next": "^21.9.1",
     "next": "latest",

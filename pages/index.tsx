@@ -12,12 +12,17 @@ import { english } from '../public/locales/english'
 import { french } from '../public/locales/french'
 import { spanish } from '../public/locales/spanish'
 import { gsap } from 'gsap'
+import { Observer } from 'gsap/dist/Observer'
+import * as _ from 'lodash'
+
+gsap.registerPlugin(Observer)
 
 const Home: NextPage = () => {
   const { locale, locales, defaultLocale, asPath } = useRouter()
   const [mainData, setMainData] = useState(english)
   const boxRef = useRef<HTMLInputElement>(null)
   const q = gsap.utils.selector(boxRef)
+  const containerRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     switch (locale) {
@@ -63,15 +68,19 @@ const Home: NextPage = () => {
       tl = gsap.timeline()
       tl.to(`div.${classes.targets}`, {
         yPercent: (-100 / slides.length) * activeSlide,
-        transition: 1,
-        onComplete: doCoolStuff,
+        duration: 1.4,
+        ease: "power2.out",
       })
     }
 
     // listen for mousewheel scroll
-    window.addEventListener('wheel', (event) => slideAnim(event))
+    Observer.create({
+      wheelSpeed: 1,
+      target: window,
+      type: 'wheel',
+      onWheel: slideAnim,
+    })
 
-    function doCoolStuff() {}
   }, [])
 
   return (
