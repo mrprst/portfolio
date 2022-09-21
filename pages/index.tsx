@@ -83,14 +83,16 @@ const Home: NextPage = () => {
       type: 'wheel',
       onWheel: scrollAnim,
     })
-
   }, [])
 
   return (
     <>
       <Head>
         <title>Mathias Prost</title>
-        <meta name="description" content="I like cooking rice and cooking soul." />
+        <meta
+          name="description"
+          content="I like cooking rice and cooking soul."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -99,16 +101,16 @@ const Home: NextPage = () => {
       </div>
       <div className={classes.stage}>
         <div className={`sections ${classes.targets}`}>
-          <div className={`${classes.box} ${classes.box1}`}>
+          <div className={`${classes.box} `}>
             <Tagline localeFile={mainData} />
           </div>
-          <div className={`${classes.box} ${classes.box2}`}>
+          <div className={`${classes.box} `}>
             <About localeFile={mainData} />
           </div>
-          <div className={`${classes.box} ${classes.box2}`}>
+          <div className={`${classes.box} `}>
             <Projects localeFile={mainData} />
           </div>
-          <div className={`${classes.box} ${classes.box2}`}>
+          <div className={`${classes.box} `}>
             <Contact localeFile={mainData} />
           </div>
         </div>

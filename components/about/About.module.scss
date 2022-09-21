@@ -6,27 +6,27 @@
 .title {
   width: 100%;
   text-align: left;
-  padding: 0px 100px 0px 50px
+  padding: 50px 100px 0px 100px;
 }
 
 .content {
   display: flex;
-  padding: 0px 100px 0px 50px
-
+  padding: 0px 100px 0px 100px;
 }
 
 .text {
   width: 70%;
   text-align: left;
   padding-right: 50px;
-  padding-top: 0px;
-  margin-top: 0px;
   text-align: left;
 }
 
+.texts {
+  display: flex;
+  flex-direction: column;
+}
 
-@media (max-width: 800px) {
-
+@media (max-width: 600px) {
   .title {
     padding: 0px 40px;
   }
@@ -34,6 +34,8 @@
   .text {
     width: 100%;
     padding-right: 0;
+    font-size: 3vw !important;
+    text-align: justify;
   }
 
   .content {
@@ -43,7 +45,22 @@
 
   .containerpic {
     width: 100%;
-    display: flex;
+    display: block;
     justify-content: center;
   }
+
+  .containerpic {
+    display: none;
+  }
+
 }
+
+@media (max-width: 500px) {
+  .text{
+    font-size: 3.5vw !important;
+  }}
+
+  @media (max-width: 400px) {
+    .text{
+      font-size: 4vw !important;
+    }}

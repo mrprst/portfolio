@@ -16,6 +16,13 @@
     justify-content: center;
     align-items: center;
   }
+  @media (max-width: 600px) {
+    width: 100px;
+    height: 100px;
+  }
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
 
 .link {
@@ -32,5 +39,9 @@
     color: white !important;
     font-size: 30px;
     font-weight: bold;
+  }
+  @media (max-width: 600px) {
+    width: 130px;
+    height: 130px;
   }
 }
