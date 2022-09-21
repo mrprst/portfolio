@@ -6,7 +6,8 @@
   --secondary-light: #b4336b;
   --background: #FAF5F0;
   --pane-padding: 5px 42px;
-  --section-height: calc(100vh - 100px)
+  --section-height: calc(100vh - 100px);
+  --module-height: calc(400vh - 400px);
 }
 @font-face {
   font-family: 'YoungSerif';

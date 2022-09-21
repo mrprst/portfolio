@@ -1,6 +1,5 @@
 .container {
-  border-bottom: 1px solid var(--primary);
-  height: var(--section-height);
+  height: 100%;
   width: 100%;
 }
 
@@ -27,6 +26,7 @@
 
 .title {
   padding: 25px 100px 0px 100px;
+  margin: 0px;
   margin-bottom: 0px;
 }
 

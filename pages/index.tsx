@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     let activeMenuItem = 0
     let oldMenuItem = 0
-    let sections = gsap.utils.toArray(`div.${classes.box}`)
+    let sections = gsap.utils.toArray(`div.${classes.slide}`)
     let tl: any
 
     function scrollAnim(e: { deltaY: number }) {
@@ -80,13 +80,16 @@ const Home: NextPage = () => {
     Observer.create({
       wheelSpeed: 1,
       target: window,
-      type: 'wheel',
+      type: 'wheel,touch',
       onWheel: scrollAnim,
+      onDrag: scrollAnim
     })
 
-    window.onscroll = function (e) {
-      scrollAnim
-    }
+    // document.addEventListener("touchmove", test, false);
+
+    // function test() {
+    //   console.log("ee")
+    // }
 
   }, [])
 
@@ -106,16 +109,16 @@ const Home: NextPage = () => {
       </div>
       <div className={classes.stage}>
         <div className={`sections ${classes.targets}`}>
-          <div className={`${classes.box} `}>
+          <div className={`${classes.slide} `}>
             <Tagline localeFile={mainData} />
           </div>
-          <div className={`${classes.box} `}>
+          <div className={`${classes.slide} `}>
             <About localeFile={mainData} />
           </div>
-          <div className={`${classes.box} `}>
+          <div className={`${classes.slide} `}>
             <Projects localeFile={mainData} />
           </div>
-          <div className={`${classes.box} `}>
+          <div className={`${classes.slide} `}>
             <Contact localeFile={mainData} />
           </div>
         </div>
