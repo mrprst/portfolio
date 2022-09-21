@@ -1,12 +1,36 @@
 .container {
   width: 100%;
-  padding: 0px 50px 0px 50px;
-  height: calc(100vh - 100px);
+  height: var(--section-height);
+  padding: 25px 100px 0px 100px;
 }
 
+.container > p {
+  text-align: center;
+  width: 50%;
+  text-align: justify;
+}
+
+.button {
+  margin-top: 40px;
+}
 
 @media (max-width: 600px) {
   .container  {
     padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container > p {
+    text-align: center;
+  }
+
+  .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 }

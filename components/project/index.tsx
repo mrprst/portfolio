@@ -16,7 +16,7 @@ type LocaleProps = {
   }
 }
 
-function Project({project}: LocaleProps) {
+function Project({ project }: LocaleProps) {
   const { locale } = useRouter()
   const [data, setData] = useState(project)
 
@@ -27,28 +27,30 @@ function Project({project}: LocaleProps) {
   return (
     <div className={classes.projectdetails}>
       <h2 className={classes.title}>{project.title}</h2>
-      <div>
-        <Projectpic
-          project={project.title}
-          link={project.website}
-          image={project.image}
-        />
+      <div className={classes.project}>
+        <div className={classes.left}>
+          <Projectpic
+            project={project.title}
+            link={project.website}
+            image={project.image}
+          />
+          <div className={classes.languages}>
+            {data.stack.map((techno: string, key: number) => (
+              <span key={key}>
+                <Code>{techno}</Code>
+              </span>
+            ))}
+          </div>
+          <div className={classes.logos}>
+            <a className={classes.logo} href={project.github} target="blank">
+              <img src="\images/github.svg" />
+            </a>
+            <a className={classes.logo} href={project.website} target="blank">
+              <img src="\images/link.svg" />
+            </a>
+          </div>
+        </div>
         <p className={classes.description}>{project.description}</p>
-      </div>
-      <div className={classes.languages}>
-        {data.stack.map((techno: string, key: number) => (
-          <span key={key}>
-            <Code>{techno}</Code>
-          </span>
-        ))}
-      </div>
-      <div className={classes.logos}>
-        <a className={classes.logo} href={project.github}>
-          <img src="\images/github.svg" />
-        </a>
-        <a className={classes.logo} href={project.website}>
-          <img src="\images/link.svg" />
-        </a>
       </div>
     </div>
   )
