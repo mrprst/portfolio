@@ -4,19 +4,20 @@ import classes from './Contact.module.scss'
 
 type LocaleProps = {
   localeFile: {
-    contact: string;
-    contactText: string;
+    contact: string
+    contactText: string
     contactCTA: string
-  };
+  }
 }
 
-export default function Contact({localeFile}: LocaleProps) {
-
+export default function Contact({ localeFile }: LocaleProps) {
   return (
-    <div id='contact' className={classes.container}>
+    <div id="contact" className={classes.container}>
       <h1 className={classes.title}>{localeFile.contact}</h1>
       <p>{localeFile.contactText}</p>
-      <Button title={localeFile.contactCTA} size="sm" />
+      <div className={classes.button}>
+        <Button title={localeFile.contactCTA} size="lg" />
+      </div>
     </div>
   )
 }

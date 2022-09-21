@@ -45,7 +45,7 @@ function Projects({ localeFile }: LocaleProps) {
   return (
     <div id="projects" className={classes.container}>
       <h1 className={classes.title}>Projects</h1>
-      <div>
+      <div className={classes.select}>
         <div className={classes.buttons}>
           <div
             className={classes.button}

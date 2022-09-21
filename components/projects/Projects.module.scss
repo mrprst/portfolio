@@ -1,15 +1,24 @@
 .container {
   border-bottom: 1px solid var(--primary);
-  height: calc(100vh - 100px);
+  height: var(--section-height);
+  width: 100%;
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 100px;
 }
 
 .buttons {
   display: flex;
-  flex-direction: row;
-  padding: 0px 100px 0px 50px;
-  @media (max-width: 600px) {
-    width: 100%;
-  }
+  margin-top: 2em;
+  flex-direction: column;
+  height: 200px;
+  width: 100px;
+  justify-content: space-between;
 }
 
 .button {
@@ -17,26 +26,20 @@
 }
 
 .title {
-  padding: 0px 100px 0px 50px
+  padding: 25px 100px 0px 100px;
+  margin-bottom: 0px;
 }
 
-.project {
-  margin-top: 20px;
-}
 
 .projectcontainer {
   display: flex;
   align-items: center;
   padding: 0px 50px 0px 50px;
-  @media (max-width: 900px) {
-    flex-direction: column-reverse;
-    padding: 0px 40px;
-  }
 }
 
-@media (max-width: 800px) {
-
-  .title, .buttons {
+@media (max-width: 880px) {
+  .title,
+  .buttons {
     padding: 0px 40px;
   }
 
@@ -44,4 +47,26 @@
     margin-right: 20px;
   }
 
+  .project {
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  .select {
+    flex-direction: column;
+    padding-left: 40px;
+    align-items: flex-start;
+    width: 94vw;
+  }
+
+  .buttons {
+    flex-direction: row;
+    padding-left: 0px !important;
+    height: 40px;
+  }
+
+  .projectcontainer {
+    flex-direction: column-reverse;
+    padding: 0px
+  }
 }

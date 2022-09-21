@@ -5,8 +5,8 @@
   border-radius: 100%;
   box-shadow: 0.2rem 0.2rem 0px 0px var(--primary),
     0.2rem 0.2rem 0 0.1rem var(--primary);
-  width: 230px;
-  height: 230px;
+  width: 20vw;
+  height: 20vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +16,15 @@
     justify-content: center;
     align-items: center;
   }
+  @media (max-width: 1000px) {
+    width: 15vw;
+    height: 15vw;
+    margin-top: 20px;
+  }
+
   @media (max-width: 600px) {
     width: 100px;
     height: 100px;
-  }
-  @media (max-width: 400px) {
-    display: none;
   }
 }
 

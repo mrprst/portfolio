@@ -1,5 +1,5 @@
 .container {
-  height: calc(100vh - 100px);
+  height: var(--section-height);
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -12,7 +12,7 @@
 .title {
   width: 85%;
   text-align: left;
-  padding: 50px 100px 0px 100px;
+  padding: 25px 100px 0px 100px;
   margin-top: 0px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .button {
-  padding: 50px 100px 0px 100px;
+  padding: 25px 100px 0px 100px;
 }
 
 @media (min-width: 601px) and (max-width: 1100px) {
