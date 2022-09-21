@@ -17,7 +17,12 @@
 }
 
 .nav {
+  width: 100%;
+}
+.topnav {
   display: flex;
+  width: 30%;
+  flex-direction: row;
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
@@ -30,7 +35,32 @@
   font-size: 30px;
   font-weight: 1000;
   font-family: YoungSerif;
-  color: var(--primary)
+  color: var(--primary);
+  cursor: pointer;
+  width: 200px;
+}
+
+.text {
+  display: inline-block;
+  position: relative;
+}
+
+.text:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.text:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .bg {
@@ -40,5 +70,39 @@
 @media (max-width: 600px) {
   .bg {
     visibility: visible !important;
+  }
+
+  .topnav {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  .nav {
+    display: flex;
+  }
+  .nav > span > div > div, .nav > span > div > a {
+    font-size: 1.1rem !important;
+  }
+  .nav > span {
+    width: 80%;
+  }
+  .nav > .topnav {
+    width: 20%;
+  }
+  .nav > span > div {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 780px) {
+  .nav > span > div > div, .nav > span > div > a {
+    font-size: 1.5rem !important;;
+  }
+  .nav > span {
+    width: 70%;
+  }
+  .nav > .topnav {
+    width: 30%;
   }
 }

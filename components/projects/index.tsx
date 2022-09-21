@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import classes from './Projects.module.scss'
 import Button from '../button'
-import Projectpic from '../projectpic/'
 import Project from '../project/'
 import { useRouter } from 'next/router'
 

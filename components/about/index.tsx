@@ -12,7 +12,7 @@ type LocaleProps = {
 export default function About({localeFile}: LocaleProps) {
 
   return (
-    <div id="about" className={classes.container}>
+    <div className={classes.container}>
       <h1 className={classes.title}>{localeFile.aboutTitle}</h1>
       <div className={classes.content}>
         <p

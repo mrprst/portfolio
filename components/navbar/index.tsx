@@ -35,30 +35,34 @@ const Navbar = () => {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <div>
-          <Link href="/">
+        <div className={classes.topnav}>
+          <a href="/">
             <div
               onClick={() => {
                 showmenu ? setShowmenu(false) : setShowmenu(true)
               }}
               className={classes.logo}
             >
-              mrpr.st
+              <span className={classes.text}>mrpr.st</span>
             </div>
-          </Link>
+          </a>
+          <div className={classes.bg}>
+            <Burger
+              opened={opened}
+              onClick={() => {
+                showmenu ? setShowmenu(false) : setShowmenu(true)
+                setOpened((o) => !o)
+              }}
+              title={title}
+              color="#1C5F42"
+            />
+          </div>
         </div>
-        <div className={classes.bg}>
-          <Burger
-            opened={opened}
-            onClick={() => {
-              showmenu ? setShowmenu(false) : setShowmenu(true)
-              setOpened((o) => !o)
-            }}
-            title={title}
-            color="#1C5F42"
-          />
-        </div>
-        {opened ? <Menu setShowmenu={setShowmenu} /> : null}
+        {opened ? (
+          <span>
+            <Menu setShowmenu={setShowmenu} />
+          </span>
+        ) : null}
       </nav>
     </header>
   )

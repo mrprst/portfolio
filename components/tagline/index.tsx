@@ -11,8 +11,6 @@ type LocaleProps = {
 }
 
 function Tagline({ localeFile }: LocaleProps) {
-
-
   return (
     <div className={classes.container}>
       <h1
@@ -21,7 +19,9 @@ function Tagline({ localeFile }: LocaleProps) {
       ></h1>
       <p className={`sub ${classes.content}`}>{localeFile.taglineSubtitle}</p>
       <div className={classes.button}>
-        <Button title={localeFile.taglineButton} size="lg" />
+        <a href='#about'>
+          <Button title={localeFile.taglineButton} size="lg" />
+        </a>
       </div>
     </div>
   )

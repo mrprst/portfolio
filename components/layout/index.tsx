@@ -9,15 +9,11 @@ interface Props {
 }
 
 export default function Layout({ children }: Props) {
+
   return (
     <div className={classes.layout}>
-      <Navbar />
-      <div className={classes.sidebar}>
-        <Sidebar/>
-      </div>
       <div id="content">
         <main className={classes.main}>{children}</main>
-        <Footer />
       </div>
     </div>
   );
