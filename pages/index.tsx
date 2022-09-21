@@ -80,10 +80,14 @@ const Home: NextPage = () => {
     Observer.create({
       wheelSpeed: 1,
       target: window,
-      type: 'wheel, scroll',
-      onDrag:scrollAnim,
+      type: 'wheel',
       onWheel: scrollAnim,
     })
+
+    window.onscroll = function (e) {
+      scrollAnim
+    }
+
   }, [])
 
   return (

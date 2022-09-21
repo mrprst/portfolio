@@ -43,6 +43,9 @@
 }
 
 @media (max-width: 600px) {
+  .container {
+    justify-content: center;
+  }
   .title {
     padding: 0px 40px;
     margin-top: 0px;
@@ -51,7 +54,7 @@
 
   .content {
     padding: 0px 40px;
-    width: 80%;
+    width: 100%;
     text-align: justify;
     margin-top: 0px;
   }
