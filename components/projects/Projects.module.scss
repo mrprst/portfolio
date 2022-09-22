@@ -8,16 +8,16 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
 .buttons {
   display: flex;
-  margin-top: 2em;
   flex-direction: column;
   height: 200px;
   width: 100px;
   justify-content: space-between;
+  margin-top: 2em;
 }
 
 .button {
@@ -25,11 +25,8 @@
 }
 
 .title {
-  padding: 25px 100px 0px 100px;
-  margin: 0px;
-  margin-bottom: 0px;
+  padding: 0px 50px;
 }
-
 
 .projectcontainer {
   display: flex;
@@ -38,6 +35,12 @@
 }
 
 @media (max-width: 880px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
   .title,
   .buttons {
     padding: 0px 40px;
@@ -63,10 +66,28 @@
     flex-direction: row;
     padding-left: 0px !important;
     height: 40px;
+    margin-top: 0;
   }
 
   .projectcontainer {
     flex-direction: column-reverse;
-    padding: 0px
+    padding: 0px;
   }
+}
+
+@media (min-width: 1100px) {
+  .title {
+    padding: 25px 100px 0px 100px;
+    margin-bottom: 0px;
+  }
+
+  .select {
+    padding: 0px 0px 0px 100px;
+  }
+
+  .content {
+    flex-direction: row;
+    padding: 0px 100px 0px 100px;
+  }
+
 }
