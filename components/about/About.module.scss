@@ -4,22 +4,29 @@
 
 .title {
   width: 100%;
-  padding: 25px 100px 0px 100px;
   text-align: left;
+  padding: 0px 40px;
 }
 
 .content {
   display: flex;
-  flex-direction: row;
-  padding: 0px 100px 0px 100px;
+  flex-direction: column;
+  padding: 0px 40px;
 }
 
 .text {
-  width: 70%;
-  padding-right: 50px;
   text-align: left;
-  font-size: 1.5vw !important;
+  font-size: 3.8vw !important;
   text-align: justify;
+  width: 100%;
+  padding-right: 0;
+  margin-top: 0px;
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .text {
+    font-size: 2.5vw !important;
+  }
 }
 
 
@@ -27,65 +34,47 @@
   .container {
     padding-top: 2rem;
   }
-  
+
   .title {
-    font-size: 3.8vw !important;
-    padding: 0px 50px 0px 50px;
+    padding: 0px 50px;
     margin-top: 0px;
   }
 
   .content {
-    padding: 0px 50px 0px 50px;
+    padding: 0px 50px;
   }
+}
+
+@media (min-width: 801px) {
 
   .text {
     font-size: 2vw !important;
   }
-
 }
 
-@media (max-width: 768px) {
-  .content,
+@media (min-width: 1100px) {
+  .container {
+    padding-top: 2rem;
+  }
   .title {
-    padding: 0px 50px 0px 50px;
-    flex-direction: column;
-  }
-
-
-  .text {
-    width: 100%;
-    font-size: 2.8vw !important;
-    padding-right: 0;
-  }
-
-  .containerpic {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .title {
-    padding: 0px 40px;
+    padding: 25px 100px 0px 100px;
   }
 
   .text {
-    width: 100%;
-    padding-right: 0;
-    font-size: 3vw !important;
-    text-align: justify;
+    font-size: 1.5vw !important;
+    padding-right: 40px;
   }
 
   .content {
+    flex-direction: row;
+    padding: 0px 100px 0px 100px;
+  }
+}
+
+@media (max-width: 880px) {
+  .container {
+    display: flex;
     flex-direction: column;
-    padding: 0px 40px;
-  }
-
-
-}
-
-@media (max-width: 400px) {
-  .containerpic {
-    display: block;
+    justify-content: center;
   }
 }
-
