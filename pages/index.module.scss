@@ -1,12 +1,6 @@
-.box {
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
 .targets {
-  position: absolute;
-  height: calc(400vh - 400px);
+  width: 100%;
+  height: var(--module-height);
   display: flex;
   flex-direction: column;
 }
@@ -17,8 +11,14 @@
   padding: 100px 0px 0px 100px;
 
   @media (max-width: 768px) {
-    padding: 100px 0px;
+    padding: 0px;
+    margin-top: 100px;
   }
+}
+
+.slide {
+  height: var(--section-height);
+  border-bottom: 1px solid var(--primary);
 
 }
 

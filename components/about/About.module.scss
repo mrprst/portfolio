@@ -1,6 +1,5 @@
 .container {
-  border-bottom: 1px solid var(--primary);
-  height: var(--section-height);
+  height: 100%;
 }
 
 .title {
@@ -12,7 +11,7 @@
 .content {
   display: flex;
   flex-direction: row;
-  padding: 25px 100px 0px 100px;
+  padding: 0px 100px 0px 100px;
 }
 
 .text {
@@ -23,29 +22,44 @@
   text-align: justify;
 }
 
-.texts {
-  display: flex;
-  flex-direction: column;
-}
 
-
-@media (max-width: 1000px) {
-  .content, .title {
-    padding: 0px 50px 0px 50px;
-    flex-direction: column;
+@media (min-width: 601px) and (max-width: 1100px) {
+  .container {
+    padding-top: 2rem;
   }
+  
+  .title {
+    font-size: 3.8vw !important;
+    padding: 0px 50px 0px 50px;
+    margin-top: 0px;
+  }
+
+  .content {
+    padding: 0px 50px 0px 50px;
+  }
+
   .text {
-    width: 90%;
     font-size: 2vw !important;
   }
+
 }
 
 @media (max-width: 768px) {
+  .content,
+  .title {
+    padding: 0px 50px 0px 50px;
+    flex-direction: column;
+  }
+
 
   .text {
     width: 100%;
     font-size: 2.8vw !important;
     padding-right: 0;
+  }
+
+  .containerpic {
+    display: none;
   }
 }
 
@@ -66,24 +80,12 @@
     padding: 0px 40px;
   }
 
-  .containerpic {
-    width: 100%;
-    display: block;
-    justify-content: center;
-  }
 
-}
-
-@media (max-width: 500px) {
-  .text {
-    font-size: 3.5vw !important;
-    width: 80%;
-  }
 }
 
 @media (max-width: 400px) {
-  .text {
-    font-size: 4vw !important;
-    width: 80%;
+  .containerpic {
+    display: block;
   }
 }
+
