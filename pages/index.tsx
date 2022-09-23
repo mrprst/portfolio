@@ -22,7 +22,7 @@ gsap.registerPlugin(Observer)
 const Home: NextPage = () => {
   const { locale } = useRouter()
   const [mainData, setMainData] = useState(english)
-  const [windowHeight, setWindowHeight] = useState<number>();
+  // const [windowHeight, setWindowHeight] = useState<number>();
 
   useEffect(() => {
     switch (locale) {
@@ -39,70 +39,12 @@ const Home: NextPage = () => {
     }
   }, [locale])
 
-  const appHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-    setWindowHeight(window.innerHeight)
-  }
+  // const appHeight = () => {
+  //   const doc = document.documentElement
+  //   doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+  //   setWindowHeight(window.innerHeight)
+  // }
 
-  // Slide effect
-  useEffect(() => {
-    let activeMenuItem = 0
-    let oldMenuItem = 0
-    let sections = gsap.utils.toArray(`div.${classes.slide}`)
-    let tl: any
-
-    function scrollAnim(e: { deltaY: number }) {
-      // if the container is animating the wheel won't work
-      if (tl && tl.isActive()) {
-        return
-      }
-      // temp variable to see if we're at the beginning or end
-      oldMenuItem = activeMenuItem
-      // which way did we scroll the mousewheel
-      activeMenuItem =
-        e.deltaY > 0 ? (activeMenuItem += 1) : (activeMenuItem -= 1)
-      // are we at the beginning of the slides?
-      activeMenuItem = activeMenuItem < 0 ? 0 : activeMenuItem
-      // are we at the end of the slides?
-      activeMenuItem =
-        activeMenuItem > sections.length - 1
-          ? sections.length - 1
-          : activeMenuItem
-      // if at the beginning or end there is nothing to animate
-      if (oldMenuItem === activeMenuItem) {
-        return
-      }
-      // if not at the beginning or end, we can animate the container
-      // and the targets to the new position
-      tl = gsap.timeline()
-      tl.to(`div.${classes.targets}`, {
-        yPercent: (-100 / sections.length) * activeMenuItem,
-        duration: 1.4,
-        ease: 'Power0.easeNone',
-      })
-    }
-
-      // listen for mousewheel scroll
-    Observer.create({
-      id: "main",
-      wheelSpeed: 1,
-      target: window,
-      type: 'wheel,touch',
-      onWheel: scrollAnim,
-      onDrag: scrollAnim,
-    })
-
-    if (window.matchMedia('(min-height: 650px)').matches) {
-      Observer.getById("my-id")?.enable()
-    } else {
-      console.log(Observer.getById("main")?.kill())
-    }
-
-    window.addEventListener('resize', appHeight)
-    appHeight()
-
-  }, [windowHeight])
 
   return (
     <>
@@ -119,7 +61,7 @@ const Home: NextPage = () => {
         <Sidebar />
       </div>
       <div className={classes.stage}>
-        <div className={`sections ${classes.targets}`}>
+        <div className={`${classes.targets}`}>
           <div className={`${classes.slide} `}>
             <Tagline localeFile={mainData} />
           </div>

@@ -8,7 +8,8 @@
   --pane-padding: 5px 42px;
   --section-height: calc(100vh - 100px);
   --module-height: calc(400vh - 400px);
-  --app-height: 100%;
+  --app-height: calc(100vh - calc(100vh - 100%))
+
 }
 
 @font-face {
@@ -26,13 +27,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--background) !important;
   width: 100vw;
-  height: 100vh;
-  @media not all and (hover: hover) {
-    height: var(--app-height);
-  }
-  @media (min-height: 650px) {
-    overflow: hidden;
-  }
+  height: var(--app-height);
+  // @media not all and (hover: hover) {
+  //   height: var(--app-height);
+  // }
+
 }
 
 h1,

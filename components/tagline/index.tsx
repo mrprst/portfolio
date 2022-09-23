@@ -13,24 +13,26 @@ type LocaleProps = {
 }
 
 function Tagline({ localeFile }: LocaleProps) {
-  const boxRef = useRef<HTMLInputElement>(null)
-  const q = gsap.utils.selector(boxRef)
+  // const boxRef = useRef<HTMLInputElement>(null)
+  // const q = gsap.utils.selector(boxRef)
 
-  useEffect(() => {
-    function clickAnim() {
-      let tl = gsap.timeline()
-      tl.to(`div.sections`, {
-        yPercent: -25,
-        duration: 1.4,
-        ease: 'Power0.easeNone',
-      })
-    }
+  // useEffect(() => {
 
-    Observer.create({
-      target: classes.ctabutton,
-      onClick: () => clickAnim(),
-    })
-  }, [])
+  //   function clickAnim() {
+  //     let tl = gsap.timeline()
+  //     tl.to(`div.main`, {
+  //       yPercent: -25,
+  //       duration: 1.4,
+  //       ease: 'Power0.easeNone',
+  //     })
+  //   }
+
+  //   Observer.create({
+  //     id: 'button',
+  //     target: classes.ctabutton,
+  //     onClick: () => clickAnim(),
+  //   })
+  // }, [])
 
   return (
     <div className={classes.container}>

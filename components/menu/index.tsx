@@ -17,31 +17,13 @@ function Menu({ setShowmenu }: Props) {
   const [opened, setOpened] = useState(true)
   const [menulocale, setMenuLocale] = useState([''])
   const [url, setUrl] = useState('')
-  const boxRef = useRef<HTMLInputElement>(null)
-  const q = gsap.utils.selector(boxRef)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const isNarrowScreen = window.matchMedia('(max-width: 600px)')
       isNarrowScreen.matches ? setOpened(false) : setOpened(true)
     }
-    const items = gsap.utils.toArray(`div.${classes.a}`)
-    gsap.timeline().fromTo(items, { opacity: 0 }, { opacity: 1 })
-    function clickAnim(index: number) {
-      let tl = gsap.timeline()
-      tl.to(`div.sections`, {
-        yPercent: (-100 / 4) * index,
-        duration: 1.4,
-        ease: 'power.out',
-      })
-    }
 
-    items.forEach((item: any, index: number) => {
-      Observer.create({
-        target: item,
-        onClick: () => clickAnim(index + 1),
-      })
-    })
   }, [])
 
   useEffect(() => {
@@ -62,7 +44,7 @@ function Menu({ setShowmenu }: Props) {
   }, [locale])
 
   return (
-    <div ref={boxRef} className={classes.menu}>
+    <div className={classes.menu}>
       <div onClick={() => setShowmenu(false)} className={`${classes.a}`}>
         {menulocale[0]}
       </div>
