@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import About from '../components/about'
@@ -22,6 +22,7 @@ gsap.registerPlugin(Observer)
 const Home: NextPage = () => {
   const { locale } = useRouter()
   const [mainData, setMainData] = useState(english)
+  const [windowHeight, setWindowHeight] = useState<number>();
 
   useEffect(() => {
     switch (locale) {
@@ -37,6 +38,12 @@ const Home: NextPage = () => {
       default:
     }
   }, [locale])
+
+  const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    setWindowHeight(window.innerHeight)
+  }
 
   // Slide effect
   useEffect(() => {
@@ -75,23 +82,27 @@ const Home: NextPage = () => {
         ease: 'power.out',
       })
     }
-
-    // listen for mousewheel scroll
+    
+      // listen for mousewheel scroll
     Observer.create({
+      id: "main",
       wheelSpeed: 1,
       target: window,
       type: 'wheel,touch',
       onWheel: scrollAnim,
-      onDrag: scrollAnim
+      onDrag: scrollAnim,
     })
 
-    // document.addEventListener("touchmove", test, false);
+    if (window.matchMedia('(min-height: 650px)').matches) {
+      Observer.getById("my-id")?.enable()
+    } else {
+      console.log(Observer.getById("main")?.kill())
+    }
 
-    // function test() {
-    //   console.log("ee")
-    // }
+    window.addEventListener('resize', appHeight)
+    appHeight()
 
-  }, [])
+  }, [windowHeight])
 
   return (
     <>

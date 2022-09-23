@@ -25,12 +25,12 @@ function Menu({ setShowmenu }: Props) {
       isNarrowScreen.matches ? setOpened(false) : setOpened(true)
     }
     const items = gsap.utils.toArray(`div.${classes.a}`)
-    console.log(items)
+    const sections = gsap.utils.toArray(`div.sections`)
+    console.log(sections)
     gsap.timeline().fromTo(items, { opacity: 0 }, { opacity: 1 })
-
     function clickAnim(index: number) {
       let tl = gsap.timeline()
-      tl.to(`.sections`, {
+      tl.to(`div.sections`, {
         yPercent: (-100 / 4) * index,
         duration: 1.4,
         ease: 'power.out',
