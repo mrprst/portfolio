@@ -79,10 +79,10 @@ const Home: NextPage = () => {
       tl.to(`div.${classes.targets}`, {
         yPercent: (-100 / sections.length) * activeMenuItem,
         duration: 1.4,
-        ease: 'power.out',
+        ease: 'Power0.easeNone',
       })
     }
-    
+
       // listen for mousewheel scroll
     Observer.create({
       id: "main",

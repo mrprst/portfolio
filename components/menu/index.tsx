@@ -16,6 +16,7 @@ function Menu({ setShowmenu }: Props) {
   const { locale } = useRouter()
   const [opened, setOpened] = useState(true)
   const [menulocale, setMenuLocale] = useState([''])
+  const [url, setUrl] = useState('')
   const boxRef = useRef<HTMLInputElement>(null)
   const q = gsap.utils.selector(boxRef)
 
@@ -25,8 +26,6 @@ function Menu({ setShowmenu }: Props) {
       isNarrowScreen.matches ? setOpened(false) : setOpened(true)
     }
     const items = gsap.utils.toArray(`div.${classes.a}`)
-    const sections = gsap.utils.toArray(`div.sections`)
-    console.log(sections)
     gsap.timeline().fromTo(items, { opacity: 0 }, { opacity: 1 })
     function clickAnim(index: number) {
       let tl = gsap.timeline()
@@ -49,12 +48,15 @@ function Menu({ setShowmenu }: Props) {
     switch (locale) {
       case 'es-ES':
         setMenuLocale(['a proposito', 'proyectos', 'contacto', 'CV'])
+        setUrl('/mathias-prost-resume.pdf')
         break
       case 'fr-FR':
         setMenuLocale(['à propos', 'projets', 'contact', 'CV'])
+        setUrl('/cv-mathias-prost.pdf')
         break
       case 'en-US':
         setMenuLocale(['about', 'projets', 'contact', 'resume'])
+        setUrl('/mathias-prost-resume.pdf')
         break
     }
   }, [locale])
@@ -70,7 +72,7 @@ function Menu({ setShowmenu }: Props) {
       <div onClick={() => setShowmenu(false)} className={classes.a}>
         {menulocale[2]}
       </div>
-      <Link href={'/mathias-prost-resume.pdf'} locale={false}>
+      <Link href={url} locale={false}>
         <a
           target="_blank"
           onClick={() => setShowmenu(false)}
