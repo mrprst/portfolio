@@ -15,10 +15,6 @@ type LocaleProps = {
 export default function Contact({ localeFile }: LocaleProps) {
   const mail = 'mailto:prost.mathias@gmail.com'
 
-  function sendEmail() {
-    window.location = 'mailto:xyz@yourapplicationdomain.com'
-  }
-
   return (
     <div className={classes.container}>
       <h1 className={classes.title}>{localeFile.contact}</h1>
