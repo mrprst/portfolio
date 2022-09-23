@@ -23,7 +23,6 @@ function Menu({ setShowmenu }: Props) {
       const isNarrowScreen = window.matchMedia('(max-width: 600px)')
       isNarrowScreen.matches ? setOpened(false) : setOpened(true)
     }
-
   }, [])
 
   useEffect(() => {
@@ -36,7 +35,7 @@ function Menu({ setShowmenu }: Props) {
         setMenuLocale(['à propos', 'projets', 'contact', 'CV'])
         setUrl('/cv-mathias-prost.pdf')
         break
-      case 'en-US':
+      case 'en-EN':
         setMenuLocale(['about', 'projets', 'contact', 'resume'])
         setUrl('/mathias-prost-resume.pdf')
         break
@@ -45,15 +44,21 @@ function Menu({ setShowmenu }: Props) {
 
   return (
     <div className={classes.menu}>
-      <div onClick={() => setShowmenu(false)} className={`${classes.a}`}>
-        {menulocale[0]}
-      </div>
-      <div onClick={() => setShowmenu(false)} className={classes.a}>
-        {menulocale[1]}
-      </div>
-      <div onClick={() => setShowmenu(false)} className={classes.a}>
-        {menulocale[2]}
-      </div>
+      <Link href="#about">
+        <div onClick={() => setShowmenu(false)} className={classes.a}>
+          {menulocale[0]}
+        </div>
+      </Link>
+      <Link href="#projects">
+        <div onClick={() => setShowmenu(false)} className={classes.a}>
+          {menulocale[1]}
+        </div>
+      </Link>
+      <Link href="#contact">
+        <div onClick={() => setShowmenu(false)} className={classes.a}>
+          {menulocale[2]}
+        </div>
+      </Link>
       <Link href={url} locale={false}>
         <a
           target="_blank"

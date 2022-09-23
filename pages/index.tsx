@@ -22,7 +22,6 @@ gsap.registerPlugin(Observer)
 const Home: NextPage = () => {
   const { locale } = useRouter()
   const [mainData, setMainData] = useState(english)
-  // const [windowHeight, setWindowHeight] = useState<number>();
 
   useEffect(() => {
     switch (locale) {
@@ -32,19 +31,12 @@ const Home: NextPage = () => {
       case 'fr-FR':
         setMainData(french)
         break
-      case 'en-US':
+      case 'en-EN':
         setMainData(english)
         break
       default:
     }
   }, [locale])
-
-  // const appHeight = () => {
-  //   const doc = document.documentElement
-  //   doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-  //   setWindowHeight(window.innerHeight)
-  // }
-
 
   return (
     <>
@@ -62,16 +54,16 @@ const Home: NextPage = () => {
       </div>
       <div className={classes.stage}>
         <div className={`${classes.targets}`}>
-          <div className={`${classes.slide} `}>
+          <div id="tagline" className={`${classes.slide} `}>
             <Tagline localeFile={mainData} />
           </div>
-          <div className={`${classes.slide} `}>
+          <div id="about" className={`${classes.slide} `}>
             <About localeFile={mainData} />
           </div>
-          <div className={`${classes.slide} `}>
+          <div id="projects" className={`${classes.slide} `}>
             <Projects localeFile={mainData} />
           </div>
-          <div className={`${classes.slide} `}>
+          <div id="contact" className={`${classes.slide} `}>
             <Contact localeFile={mainData} />
           </div>
         </div>

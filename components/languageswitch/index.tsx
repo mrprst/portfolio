@@ -12,9 +12,9 @@ function LanguageSwitch() {
   return (
     <div className={classes.container}>
       <div className={classes.languages}>
-        <Link href={asPath} locale="en-US">
+        <Link href={asPath} locale="en-EN">
           <div
-            className={locale === 'en-US' ? classes.active : classes.link}
+            className={locale === 'en-EN' ? classes.active : classes.link}
             onClick={() => setOpened(false)}
           >
             en

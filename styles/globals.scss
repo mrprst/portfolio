@@ -95,3 +95,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#about, #projects, #contact, #tagline {
+  scroll-margin-top: 100px;
+}
+

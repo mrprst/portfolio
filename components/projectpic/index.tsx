@@ -13,6 +13,8 @@ type Props = {
 export default function Projectpic(props: Props) {
   const divImage = {
     backgroundImage: 'url(/images/' + props.image,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
   }
 
   return (

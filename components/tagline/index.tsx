@@ -13,27 +13,6 @@ type LocaleProps = {
 }
 
 function Tagline({ localeFile }: LocaleProps) {
-  // const boxRef = useRef<HTMLInputElement>(null)
-  // const q = gsap.utils.selector(boxRef)
-
-  // useEffect(() => {
-
-  //   function clickAnim() {
-  //     let tl = gsap.timeline()
-  //     tl.to(`div.main`, {
-  //       yPercent: -25,
-  //       duration: 1.4,
-  //       ease: 'Power0.easeNone',
-  //     })
-  //   }
-
-  //   Observer.create({
-  //     id: 'button',
-  //     target: classes.ctabutton,
-  //     onClick: () => clickAnim(),
-  //   })
-  // }, [])
-
   return (
     <div className={classes.container}>
       <h1
@@ -42,7 +21,7 @@ function Tagline({ localeFile }: LocaleProps) {
       ></h1>
       <p className={`sub ${classes.content}`}>{localeFile.taglineSubtitle}</p>
       <div className={classes.ctabutton}>
-        <a>
+        <a href='#about'>
           <Button title={localeFile.taglineButton} size="lg" />
         </a>
       </div>
