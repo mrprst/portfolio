@@ -17,13 +17,9 @@
 }
 
 .slide {
-  height: auto;
-  padding-bottom: 30px;
+  height: var(--section-height);
   border-bottom: 1px solid var(--primary);
 
-  @media (min-height: 650px) {
-    height: var(--section-height);
-  }
 }
 
 .sidebar {
