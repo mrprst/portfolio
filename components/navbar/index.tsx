@@ -9,15 +9,6 @@ const Navbar = () => {
   const [showmenu, setShowmenu] = useState<boolean | undefined>(undefined)
   const [opened, setOpened] = useState(true)
   const title = opened ? 'Close navigation' : 'Open navigation'
-  // const boxRef = useRef<HTMLInputElement>(null)
-  // const q = gsap.utils.selector(boxRef)
-
-  // useEffect(() => {
-  //   gsap
-  //     .timeline()
-  //     .from(q('div'), {opacity: 0})
-  //     .duration(1)
-  // }, [])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -36,7 +27,7 @@ const Navbar = () => {
     <header className={classes.header}>
       <nav className={classes.nav}>
         <div className={classes.topnav}>
-          <a href="/">
+          <a href="#tagline">
             <div
               onClick={() => {
                 showmenu ? setShowmenu(false) : setShowmenu(true)

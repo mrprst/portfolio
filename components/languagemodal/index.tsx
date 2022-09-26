@@ -12,17 +12,28 @@ function LanguageModal() {
 
   return (
     <div className={classes.container}>
-      <Modal styles={{ modal: {backgroundColor: 'var(--background)' } }} opened={opened} onClose={() => setOpened(false)}>
+      <Modal
+        styles={{ modal: { backgroundColor: 'var(--background)' } }}
+        opened={opened}
+        onClose={() => setOpened(false)}
+      >
         <div>
           <div className={classes.languages}>
-            <Link href={asPath} locale="en-US">
-              <div className={locale==="en-US" ? classes.active : classes.link} onClick={() => setOpened(false)}>English</div>
-            </Link>
-            <Link href={asPath} locale="es-ES">
-              <div className={locale==="es-ES" ? classes.active : classes.link} onClick={() => setOpened(false)}>Español</div>
+            <Link href={asPath} locale="en-EN">
+              <div
+                className={locale === 'en-EN' ? classes.active : classes.link}
+                onClick={() => setOpened(false)}
+              >
+                English
+              </div>
             </Link>
             <Link href={asPath} locale="fr-FR">
-              <div className={locale==="fr-FR" ? classes.active : classes.link} onClick={() => setOpened(false)}>Français</div>
+              <div
+                className={locale === 'fr-FR' ? classes.active : classes.link}
+                onClick={() => setOpened(false)}
+              >
+                Français
+              </div>
             </Link>
           </div>
         </div>
@@ -32,7 +43,7 @@ function LanguageModal() {
         <Image
           className={`language ${classes.logo}`}
           onClick={() => setOpened(true)}
-          src={"/images/" + locale + ".svg"}
+          src={'/images/' + locale + '.svg'}
           alt="language switch"
         />
       </Group>

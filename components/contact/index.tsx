@@ -1,6 +1,8 @@
+import next from 'next'
 import React, { useState, useEffect } from 'react'
 import Button from '../button'
 import classes from './Contact.module.scss'
+import Link from 'next/link'
 
 type LocaleProps = {
   localeFile: {
@@ -11,12 +13,16 @@ type LocaleProps = {
 }
 
 export default function Contact({ localeFile }: LocaleProps) {
+  const mail = 'mailto:prost.mathias@gmail.com'
+
   return (
-    <div id="contact" className={classes.container}>
+    <div className={classes.container}>
       <h1 className={classes.title}>{localeFile.contact}</h1>
       <p>{localeFile.contactText}</p>
       <div className={classes.button}>
-        <Button title={localeFile.contactCTA} size="lg" />
+        <a href={mail}>
+          <Button title={localeFile.contactCTA} size="lg" />
+        </a>
       </div>
     </div>
   )

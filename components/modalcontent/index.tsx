@@ -28,12 +28,8 @@ function ModalContent() {
           {locale}
         </span>
       </div>
-      <Link href={asPath} locale="es-ES">
-        <p onClick={() => setOpened(false)}>es-ES</p>
-      </Link>
-
-      <Link href={asPath} locale="en-US">
-        <p onClick={() => setOpened(false)}>en-US</p>
+      <Link href={asPath} locale="en-EN">
+        <p onClick={() => setOpened(false)}>en-EN</p>
       </Link>
       <Link href={asPath} locale="fr-FR">
         <p onClick={() => setOpened(false)}>fr-FR</p>

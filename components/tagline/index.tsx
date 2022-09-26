@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import classes from './Tagline.module.scss'
 import Button from '../button'
+import { gsap } from 'gsap'
+import { Observer } from 'gsap/dist/Observer'
 
 type LocaleProps = {
   localeFile: {
@@ -18,7 +20,7 @@ function Tagline({ localeFile }: LocaleProps) {
         dangerouslySetInnerHTML={{ __html: localeFile.taglineTitle }}
       ></h1>
       <p className={`sub ${classes.content}`}>{localeFile.taglineSubtitle}</p>
-      <div className={classes.button}>
+      <div className={classes.ctabutton}>
         <a href='#about'>
           <Button title={localeFile.taglineButton} size="lg" />
         </a>
