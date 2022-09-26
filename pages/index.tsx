@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           name="description"
           content="I like cooking rice and cooking soul."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
       </Head>
       <Navbar />
       <div className={classes.sidebar}>
