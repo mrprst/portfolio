@@ -33,11 +33,16 @@ function Projects({ localeFile }: LocaleProps) {
     image: '',
   })
 
+  console.log(selectedproject)
+
   useEffect(() => {
     Object.keys(localeFile.projects).map((data, key) => {
       if (key === selectedprojectId) {
         let index = +Object.keys(localeFile.projects)[key]
         setSelectedproject(localeFile.projects[index])
+        document.getElementById('buttons').children[
+          index
+        ].className += `${classes.active}`
       }
     })
   }, [localeFile, locale, selectedprojectId])
@@ -46,7 +51,7 @@ function Projects({ localeFile }: LocaleProps) {
     <div className={classes.container}>
       <h1 className={classes.title}>Projects</h1>
       <div className={classes.select}>
-        <div className={classes.buttons}>
+        <div id="buttons" className={classes.buttons}>
           <div
             className={classes.button}
             onClick={() => setSelectedprojectId(0)}
@@ -63,7 +68,7 @@ function Projects({ localeFile }: LocaleProps) {
             className={classes.button}
             onClick={() => setSelectedprojectId(2)}
           >
-            <Button title="IMR" size="sm" />
+            <Button title="R.T.S." size="sm" />
           </div>
         </div>
         <div className={classes.project}>

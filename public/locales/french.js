@@ -30,13 +30,13 @@ export const french = {
       "image": "slaf.jpg"
     },
     2: {
-      "title": "In Medias Res",
+      "title": "Records Tshirt Store",
       "description":
-        "TBC",
-      "stack": ["vuejs", "radioco"],
-      "github": "https://github.com/alafanechere/imr/",
-      "website": "https://imr.party/",
-      "image": ""
+        "Site vitrine de vente de tshirts floqués avec des disques de mon panthéon personnel. Chaque pochette est flocable avec une couleur différente.",
+      "stack": ["react.js", "next.js", "prisma"],
+      "github": "https://github.com/mrprst/panopli-app/",
+      "website": "https://panopli-app.vercel.app/",
+      "image": "rts.jpeg"
     }
   }
 }
