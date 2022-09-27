@@ -34,10 +34,10 @@ function Project({ project }: LocaleProps) {
             link={project.website}
             image={project.image}
           />
-          <div className={classes.languages}>
+          <div className={classes.stack}>
             {data.stack.map((techno: string, key: number) => (
               <span key={key}>
-                <Code>{techno}</Code>
+                <Code className={classes.code}>{techno}</Code>
               </span>
             ))}
           </div>

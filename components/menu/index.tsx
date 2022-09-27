@@ -42,6 +42,8 @@ function Menu({ setShowmenu }: Props) {
     }
   }, [locale])
 
+  use
+
   return (
     <div className={classes.menu}>
       <Link href="#about">
