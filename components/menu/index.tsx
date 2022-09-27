@@ -4,9 +4,9 @@ import classes from './Menu.module.scss'
 import Link from 'next/link'
 import LanguageModal from '../languagemodal'
 import LanguageSwitch from '../languageswitch'
+import { useRouter } from 'next/router'
 import { gsap } from 'gsap'
 import { Observer } from 'gsap/dist/Observer'
-import { useRouter } from 'next/router'
 
 type Props = {
   setShowmenu: any
@@ -26,6 +26,20 @@ function Menu({ setShowmenu }: Props) {
   }, [])
 
   useEffect(() => {
+    const items = gsap.utils.toArray(`div.${classes.a}`).reverse()
+    const mainTimeline = gsap.timeline()
+    mainTimeline.fromTo(
+      `div.${classes.language}`,
+      { opacity: 0 },
+      { duration: 0.4, opacity: 1 }
+    )
+    items.forEach((item: any, index: number) => {
+      let tl = gsap.timeline().fromTo(item, { opacity: 0 }, { opacity: 1 })
+      mainTimeline.add(tl, (index + 1) * 0.2)
+    })
+  }, [])
+
+  useEffect(() => {
     switch (locale) {
       case 'es-ES':
         setMenuLocale(['a proposito', 'proyectos', 'contacto', 'CV'])
@@ -41,10 +55,6 @@ function Menu({ setShowmenu }: Props) {
         break
     }
   }, [locale])
-
-  useEffect(() => {
-    gsap.to(`${classes.a}`, { duration: 4, opacity: 1 })
-  })
 
   return (
     <div className={classes.menu}>
@@ -64,15 +74,11 @@ function Menu({ setShowmenu }: Props) {
         </div>
       </Link>
       <Link href={url} locale={false}>
-        <a
-          target="_blank"
-          onClick={() => setShowmenu(false)}
-          className={classes.a}
-        >
-          {menulocale[3]}
+        <a target="_blank" onClick={() => setShowmenu(false)}>
+          <div className={classes.a}>{menulocale[3]}</div>
         </a>
       </Link>
-      <div onClick={() => setShowmenu(false)}>
+      <div className={classes.language} onClick={() => setShowmenu(false)}>
         {opened ? <LanguageModal /> : <LanguageSwitch />}
       </div>
     </div>

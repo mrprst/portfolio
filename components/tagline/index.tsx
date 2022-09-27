@@ -13,6 +13,17 @@ type LocaleProps = {
 }
 
 function Tagline({ localeFile }: LocaleProps) {
+  useEffect(() => {
+    gsap
+      .timeline()
+      .fromTo(`div.${classes.container}`,{
+        opacity: 0,
+      }, {
+        opacity: 1,
+        duration:1,
+      })
+  }, [])
+
   return (
     <div className={classes.container}>
       <h1
@@ -21,8 +32,8 @@ function Tagline({ localeFile }: LocaleProps) {
       ></h1>
       <p className={`sub ${classes.content}`}>{localeFile.taglineSubtitle}</p>
       <div className={classes.ctabutton}>
-        <a href='#about'>
-          <Button title={localeFile.taglineButton} size="lg" active={false}/>
+        <a href="#about">
+          <Button title={localeFile.taglineButton} size="lg" active={false} />
         </a>
       </div>
     </div>
