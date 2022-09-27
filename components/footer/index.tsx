@@ -9,7 +9,6 @@ function Footer() {
       sx={{
         display: 'flex',
         flex: '1',
-        paddingLeft: '100px',
         justifyContent: 'center',
         alignItems: 'center',
       }}

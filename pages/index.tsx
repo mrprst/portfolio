@@ -65,10 +65,10 @@ const Home: NextPage = () => {
           </div>
           <div id="contact" className={`${classes.slide} `}>
             <Contact localeFile={mainData} />
+            <Footer />
           </div>
         </div>
       </div>
-      <Footer />
     </>
   )
 }

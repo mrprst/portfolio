@@ -22,7 +22,7 @@ function Tagline({ localeFile }: LocaleProps) {
       <p className={`sub ${classes.content}`}>{localeFile.taglineSubtitle}</p>
       <div className={classes.ctabutton}>
         <a href='#about'>
-          <Button title={localeFile.taglineButton} size="lg" />
+          <Button title={localeFile.taglineButton} size="lg" active={false}/>
         </a>
       </div>
     </div>
