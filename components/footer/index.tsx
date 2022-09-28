@@ -9,12 +9,11 @@ function Footer() {
       sx={{
         display: 'flex',
         flex: '1',
-        paddingTop: '2rem',
-        paddingBottom: '2rem',
         justifyContent: 'center',
         alignItems: 'center',
       }}
       >
+        <p className={classes.footerText}>Mathias Prost - 2022 - Made with Typescript on Next.js</p>
     </Box>
     )
 }

@@ -1,3 +1,12 @@
+.buttonActive {
+  background-color: var(--primary) !important;
+  box-shadow: 0px var(--primary) !important;
+  transition: 0.2s ease-out !important;
+  .title {
+    color: #fff !important
+  }
+}
+
 .buttonLg {
   display: flex;
   cursor: pointer;
@@ -54,4 +63,3 @@
   font-weight: bold;
   color: var(--primary);
 }
-

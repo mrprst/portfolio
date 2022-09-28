@@ -15,8 +15,8 @@ export const english = {
       "title": "Peps",
       "description":
         "Peps is a wiki-like cooking website built with Next.js, where each recipe is associated to a famous dish, a country, region and ingredients. The best way to get a debate on the best couscous or pot-au-feu variation.",
-      "stack": ["react.js", "next.js"],
-      "github": "https://github.com/SLAF-Team/Peps/",
+        "stack": ["react.js", "next.js", "prisma"],
+        "github": "https://github.com/SLAF-Team/Peps/",
       "website": "https://peps.life/",
       "image": "peps.jpg"
     },
@@ -30,12 +30,12 @@ export const english = {
       "image": "slaf.jpg"
     },
     2: {
-      "title": "In Medias Res",
+      "title": "Records Tshirt Store",
       "description":
-        "TBC",
-      "stack": ["vuejs", "radioco"],
-      "github": "https://github.com/alafanechere/imr/",
-      "website": "https://imr.party/",
-      "image": ""
-    }  }
+        "Vinyl cover tshirts webshop made with records from my personal pantheon. Each cover can be associated with a different tshirt color",
+      "stack": ["react.js", "next.js", "prisma"],
+      "github": "https://github.com/mrprst/panopli-app/",
+      "website": "https://panopli-app.vercel.app/",
+      "image": "rts.jpeg"
+    } }
 }

@@ -42,6 +42,10 @@ function Menu({ setShowmenu }: Props) {
     }
   }, [locale])
 
+  useEffect(() => {
+    gsap.to(`${classes.a}`, { duration: 4, opacity: 1 })
+  })
+
   return (
     <div className={classes.menu}>
       <Link href="#about">

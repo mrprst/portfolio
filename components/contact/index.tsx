@@ -21,7 +21,7 @@ export default function Contact({ localeFile }: LocaleProps) {
       <p>{localeFile.contactText}</p>
       <div className={classes.button}>
         <a href={mail}>
-          <Button title={localeFile.contactCTA} size="lg" />
+          <Button title={localeFile.contactCTA} size="lg" active={false}/>
         </a>
       </div>
     </div>
