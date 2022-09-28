@@ -23,6 +23,19 @@ const Navbar = () => {
     }
   }, [showmenu])
 
+  useEffect(() => {
+    gsap
+      .timeline()
+      .fromTo(`div.${classes.logo}`,{
+        x: -200,
+      }, {
+        x: 0,
+        stagger: 0.1,
+        duration:1,
+        ease: 'back',
+      })
+  }, [])
+
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
