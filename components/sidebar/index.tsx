@@ -5,14 +5,25 @@ import { Image } from '@mantine/core'
 import { gsap } from 'gsap'
 
 export default function Sidebar() {
-
   useEffect(() => {
     const logos = gsap.utils.toArray(`li.${classes.logo}`).reverse()
     const mainTimeline = gsap.timeline()
+    mainTimeline.fromTo(
+      `ul.${classes.social}`,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+      }, "+=1"
+    )
     logos.forEach(function (logo: any, index: number) {
-      let anim = gsap.timeline().fromTo(logo, { opacity: 0 }, { opacity: 1 })
+      let anim = gsap.timeline().fromTo(logo, { opacity: 0 }, { opacity: 1 },"+=1")
       mainTimeline.add(anim, (index + 1) * 0.2)
-      let tl = gsap.timeline({ paused: true }).fromTo(logo, {y: 0}, {y: -10 })
+      let tl = gsap
+        .timeline({ paused: true })
+        .fromTo(logo, { y: 0 }, { y: -10 })
       logo.addEventListener('mouseenter', () => tl.play())
       logo.addEventListener('mouseleave', () => tl.reverse())
     })
@@ -29,9 +40,7 @@ export default function Sidebar() {
           </Link>
         </li>
         <li className={classes.logo}>
-          <Link
-            href="https://www.linkedin.com/in/mathiasprost/"
-          >
+          <Link href="https://www.linkedin.com/in/mathiasprost/">
             <a target="_blank">
               <Image src="/images/linkedin.svg" alt="linkedin profile" />
             </a>

@@ -8,6 +8,7 @@ import { gsap } from 'gsap'
 const Navbar = () => {
   const [showmenu, setShowmenu] = useState<boolean | undefined>(undefined)
   const [opened, setOpened] = useState(true)
+
   const title = opened ? 'Close navigation' : 'Open navigation'
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Navbar = () => {
     }
   }, [showmenu])
 
+
   useEffect(() => {
     gsap
       .timeline()
@@ -33,7 +35,7 @@ const Navbar = () => {
         stagger: 0.1,
         duration:1,
         ease: 'back',
-      })
+      }, "+=1")
   }, [])
 
   return (
