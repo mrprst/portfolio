@@ -26,7 +26,7 @@ export const french = {
         "Le Syndicat de Lutte Anti Franglais est un dictionnaire collaboratif faussement sérieux (mais qui pique réellement les yeux) de traduction Français/Franglais inspiré du classique Urban Dictionary.",
       "stack": ["ruby", "rails"],
       "github": "https://github.com/SLAF-Team/SLAF_Project/",
-      "website": "http://syndicatdelutteantifranglais.club/",
+      "website": "https://syndicatdelutteantifranglais.club/",
       "image": "slaf.jpg"
     },
     2: {

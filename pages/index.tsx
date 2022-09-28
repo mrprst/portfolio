@@ -15,13 +15,13 @@ import { english } from '../public/locales/english'
 import { french } from '../public/locales/french'
 import { spanish } from '../public/locales/spanish'
 import { gsap } from 'gsap'
-import { Observer } from 'gsap/dist/Observer'
-
-gsap.registerPlugin(Observer)
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
 const Home: NextPage = () => {
   const { locale } = useRouter()
   const [mainData, setMainData] = useState(english)
+  gsap.registerPlugin(ScrollTrigger)
+  const mainRef = useRef(null)
 
   useEffect(() => {
     switch (locale) {
@@ -37,6 +37,21 @@ const Home: NextPage = () => {
       default:
     }
   }, [locale])
+
+  useEffect(() => {
+    const sections = gsap.utils.toArray(`div.${classes.slide}`)
+    sections.forEach(function (section: any, index: number) {
+      gsap.fromTo(section, {opacity:0, y: 100}, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: section,
+          start: 'top center',
+        },
+      })
+    })
+  }, [])
 
   return (
     <>
@@ -57,10 +72,10 @@ const Home: NextPage = () => {
           <div id="tagline" className={`${classes.slide} `}>
             <Tagline localeFile={mainData} />
           </div>
-          <div id="about" className={`${classes.slide} `}>
+          <div id="about" className={`${classes.slide} `} ref={mainRef}>
             <About localeFile={mainData} />
           </div>
-          <div id="projects" className={`${classes.slide} `}>
+          <div id="projects" className={`${classes.slide}`}>
             <Projects localeFile={mainData} />
           </div>
           <div id="contact" className={`${classes.slide} `}>
