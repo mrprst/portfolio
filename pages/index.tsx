@@ -72,10 +72,10 @@ const Home: NextPage = () => {
           <div id="tagline" className={`${classes.slide} `}>
             <Tagline localeFile={mainData} />
           </div>
-          <div id="about" className={`${classes.slide} `}>
+          <div id="about" className={`${classes.slide} `} ref={mainRef}>
             <About localeFile={mainData} />
           </div>
-          <div id="projects" className={`${classes.slide}`} ref={mainRef}>
+          <div id="projects" className={`${classes.slide}`}>
             <Projects localeFile={mainData} />
           </div>
           <div id="contact" className={`${classes.slide} `}>

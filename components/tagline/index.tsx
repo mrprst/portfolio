@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import classes from './Tagline.module.scss'
 import Button from '../button'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type LocaleProps = {
   localeFile: {
