@@ -59,7 +59,7 @@ function Projects({ localeFile }: LocaleProps) {
       <div className={classes.select}>
         <div id="buttons" className={classes.buttons}>
           <div
-            className={isActive ? `${classes.buttonActive}` : `${classes.button}`}
+            className={`${classes.button}`}
             onClick={() => handleClick(0)}
           >
             <Button title="Peps" size="sm" active={isActive[0]}/>

@@ -1,7 +1,8 @@
 .buttonActive {
   background-color: var(--primary) !important;
-  box-shadow: 0px var(--primary) !important;
   transition: 0.2s ease-out !important;
+  border: 1.2px solid var(--primary);
+
   .title {
     color: #fff !important
   }
