@@ -18,7 +18,7 @@
 
 .active {
   cursor: pointer;
-  text-decoration: underline;
+  border-bottom: 1px solid;
   color: var(--primary);
   margin: 5px;
 }
