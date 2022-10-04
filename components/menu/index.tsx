@@ -75,7 +75,7 @@ function Menu({ setShowmenu }: Props) {
       </Link>
       <Link href={url} locale={false}>
         <a target="_blank" onClick={() => setShowmenu(false)}>
-          <div className={classes.a}>{menulocale[3]}</div>
+          <div className={`${classes.a} ${classes.resume}`}>{menulocale[3]}</div>
         </a>
       </Link>
       <div className={classes.language} onClick={() => setShowmenu(false)}>
