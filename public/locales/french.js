@@ -35,7 +35,7 @@ export const french = {
         "Site vitrine de vente de tshirts floqués avec des disques de mon panthéon personnel. Chaque pochette est flocable avec une couleur différente.",
       "stack": ["react.js", "next.js", "prisma"],
       "github": "https://github.com/mrprst/panopli-app/",
-      "website": "https://panopli-app.vercel.app/",
+      "website": "https://records-tshirt-store.vercel.app/",
       "image": "rts.jpeg"
     }
   }
