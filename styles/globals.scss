@@ -9,7 +9,6 @@
   --section-height: calc(100vh - 100px);
   --module-height: calc(400vh - 400px);
   --app-height: calc(100vh - calc(100vh - 100%))
-
 }
 
 @font-face {
@@ -28,10 +27,7 @@ body {
   background-color: var(--background) !important;
   width: 100vw;
   height: var(--app-height);
-  // @media not all and (hover: hover) {
-  //   height: var(--app-height);
-  // }
-
+  scroll-behavior: smooth;
 }
 
 h1,
