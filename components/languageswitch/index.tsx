@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Modal, Button, Group } from '@mantine/core'
-import { Radio } from '@mantine/core'
+import { Image } from '@mantine/core'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import classes from './LanguageSwitch.module.scss'
@@ -17,15 +16,7 @@ function LanguageSwitch() {
             className={locale === 'en-EN' ? classes.active : classes.link}
             onClick={() => setOpened(false)}
           >
-            en
-          </div>
-        </Link>
-        <Link href={asPath} locale="es-ES">
-          <div
-            className={locale === 'es-ES' ? classes.active : classes.link}
-            onClick={() => setOpened(false)}
-          >
-            es
+            <Image src={'/images/en-EN.svg'} alt="language switch" />
           </div>
         </Link>
         <Link href={asPath} locale="fr-FR">
@@ -33,7 +24,7 @@ function LanguageSwitch() {
             className={locale === 'fr-FR' ? classes.active : classes.link}
             onClick={() => setOpened(false)}
           >
-            fr
+            <Image src={'/images/fr-FR.svg'} alt="language switch" />
           </div>
         </Link>
       </div>
