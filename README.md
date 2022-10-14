@@ -1,27 +1,11 @@
-# TypeScript & Mantine Next.js example
+# Portfolio ! 
 
-This is a simple project that shows the usage of Next.js with TypeScript and Mantine.
+## How it has been built ? 
+This portfolio is a first attempt for me to work with Typescript on a real project. I'm still learning to use it so don't blame me for the little 'any' you might see here. I've used React and Next.js to build it, and added a few Gsap animations. 
 
-## Deploy your own
+## Next.js for a static portfolio, really ? 
+Yes, this might sound a bit overkill (and it does), but my first idea was to make this portfolio as a blog, ans Next.js SSR functionalities are still something I want to master so this is why. Plus I like dynamic routes. But in the end, I won't use it much so this portfolio might turn from SPA to MPA in a near future. I'm curious about the Island Pattern and a good old portfolio is a good place to start. 
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-mantine)
+## Me, myself and I 
+Apart from training me with frameworks, this website is a small overview of my other projects, the ones I'm the most proud of, the ones that would help me get a job hopefully ! If you have anything that could fit, hit me up on Linkedin (link in bio). 
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-mantine&project-name=with-typescript-mantine&repository-name=with-typescript-mantine)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-mantine with-mantine-app
-```
-
-```bash
-yarn create next-app --example with-mantine with-mantine-app
-```
-
-```bash
-pnpm create next-app --example with-mantine with-mantine-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
