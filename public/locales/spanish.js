@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/prefer-default-export
 export const spanish = {
   "taglineTitle": "Bonjour !<br />Soy Mathias, desarollador web fullstack.",
   "taglineSubtitle": "Puede encontrar aqui todo lo que he haciendo si quiere que trabajemos juntos.",
