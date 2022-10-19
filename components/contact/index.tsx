@@ -1,8 +1,6 @@
-import next from 'next'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Button from '../button'
 import classes from './Contact.module.scss'
-import Link from 'next/link'
 
 type LocaleProps = {
   localeFile: {

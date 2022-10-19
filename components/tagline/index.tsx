@@ -16,7 +16,7 @@ function Tagline({ localeFile }: LocaleProps) {
     const items = gsap.utils.toArray([`h1.${classes.title}`, `p.${classes.content}`, `div.${classes.ctabutton}`])
     const mainTimeline = gsap.timeline()
     items.forEach(function (item: any, index: number) {
-      let anim = gsap.timeline().fromTo(item, { opacity: 0 }, { opacity: 1 },"+=1.5")
+      const anim = gsap.timeline().fromTo(item, { opacity: 0 }, { opacity: 1 },"+=1.5")
       mainTimeline.add(anim, (index + 1) * 0.2)
     })
   }, [])

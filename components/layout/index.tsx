@@ -1,8 +1,6 @@
+import React from "react";
 import { ReactNode } from "react";
-import Navbar from '../navbar/index';
-import Sidebar from '../sidebar/index';
 import classes from './Layout.module.scss';
-import Footer from '../footer/index'
 
 interface Props {
   children?: ReactNode

@@ -1,6 +1,6 @@
+import React from 'react'
 import { useState } from 'react'
-import { Modal, Button, Group } from '@mantine/core'
-import { Radio } from '@mantine/core'
+import { Modal, Group } from '@mantine/core'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Image } from '@mantine/core'
