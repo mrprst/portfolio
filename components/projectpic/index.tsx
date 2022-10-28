@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import classes from './Projectpic.module.scss'
 import slaf from '../../public/images/slaf.jpg'
 import peps from '../../public/images/peps.jpg'
@@ -18,7 +17,7 @@ export default function Projectpic(props: Props) {
   }
 
   return (
-    <a className={classes.link} href={props.link} target="_blank">
+    <a className={classes.link} href={props.link} target="_blank" rel="noreferrer" >
       <div style={divImage} className={classes.projectpic}></div>
     </a>
   )

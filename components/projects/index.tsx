@@ -38,7 +38,7 @@ function Projects({ localeFile }: LocaleProps) {
   useEffect(() => {
     Object.keys(localeFile.projects).map((data, key) => {
       if (key === selectedprojectId) {
-        let index = +Object.keys(localeFile.projects)[key]
+        const index = +Object.keys(localeFile.projects)[key]
         setSelectedproject(localeFile.projects[index])
 
       }
@@ -47,7 +47,7 @@ function Projects({ localeFile }: LocaleProps) {
 
   const handleClick = (project: number) => {
     setSelectedprojectId(project)
-    let activeArray = [false, false, false]
+    const activeArray = [false, false, false]
     activeArray[project] = activeArray[project] === false ? true : false
     setIsActive(activeArray)
   };

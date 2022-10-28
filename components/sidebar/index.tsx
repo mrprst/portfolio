@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import classes from './Sidebar.module.scss'
 import { Image } from '@mantine/core'
@@ -19,9 +19,9 @@ export default function Sidebar() {
       }, "+=1"
     )
     logos.forEach(function (logo: any, index: number) {
-      let anim = gsap.timeline().fromTo(logo, { opacity: 0 }, { opacity: 1 },"+=1")
+      const anim = gsap.timeline().fromTo(logo, { opacity: 0 }, { opacity: 1 },"+=1")
       mainTimeline.add(anim, (index + 1) * 0.2)
-      let tl = gsap
+      const tl = gsap
         .timeline({ paused: true })
         .fromTo(logo, { y: 0 }, { y: -10 })
       logo.addEventListener('mouseenter', () => tl.play())

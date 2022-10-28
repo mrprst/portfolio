@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Burger } from '@mantine/core'
-import Link from 'next/link'
 import classes from './Navbar.module.scss'
 import Menu from '../menu'
 import { gsap } from 'gsap'

@@ -1,12 +1,11 @@
 import React from 'react'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import classes from './Menu.module.scss'
 import Link from 'next/link'
 import LanguageModal from '../languagemodal'
 import LanguageSwitch from '../languageswitch'
 import { useRouter } from 'next/router'
 import { gsap } from 'gsap'
-import { Observer } from 'gsap/dist/Observer'
 
 type Props = {
   setShowmenu: any
@@ -34,7 +33,7 @@ function Menu({ setShowmenu }: Props) {
       { duration: 0.4, opacity: 1 }
     )
     items.forEach((item: any, index: number) => {
-      let tl = gsap.timeline().fromTo(item, { opacity: 0 }, { opacity: 1 })
+      const tl = gsap.timeline().fromTo(item, { opacity: 0 }, { opacity: 1 })
       mainTimeline.add(tl, (index + 1) * 0.2)
     })
   }, [])
@@ -56,6 +55,7 @@ function Menu({ setShowmenu }: Props) {
     }
   }, [locale])
 
+  console.log(setShowmenu)
   return (
     <div className={classes.menu}>
       <Link href="#about">

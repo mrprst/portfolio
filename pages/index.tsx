@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import About from '../components/about'
@@ -8,12 +8,10 @@ import Footer from '../components/footer'
 import Projects from '../components/projects'
 import Tagline from '../components/tagline'
 import Contact from '../components/contact'
-import Link from 'next/link'
 import classes from './index.module.scss'
 import { useRouter } from 'next/router'
 import { english } from '../public/locales/english'
 import { french } from '../public/locales/french'
-import { spanish } from '../public/locales/spanish'
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
@@ -25,9 +23,6 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     switch (locale) {
-      case 'es-ES':
-        setMainData(spanish)
-        break
       case 'fr-FR':
         setMainData(french)
         break
@@ -40,7 +35,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const sections = gsap.utils.toArray(`div.${classes.slide}`)
-    sections.forEach(function (section: any, index: number) {
+    sections.forEach(function (section: any) {
       gsap.fromTo(section, {opacity:0, y: 100}, {
         opacity: 1,
         y: 0,
